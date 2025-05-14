@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.proyecto.application.service.IRol;
 import com.proyecto.domain.entities.Rol;
 
@@ -21,22 +20,32 @@ public class RolImpl implements IRol{
 
     @Override
     public Optional<Rol> findById(Long id) {
-        throw new UnsupportedOperationException("Unimplemented method 'findById'");
+        return rolRepository.findById(id);
     }
 
     @Override
     public Rol save(Rol rol) {
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        return rolRepository.save(rol);
     }
 
     @Override
     public Optional<Rol> update(Long id, Rol rol) {
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+        Optional<Rol> rold = rolRepository.findById(id);
+        if(rold.isPresent()){
+            Rol roldb = rold.orElseThrow();
+            roldb.setNombre(rol.getNombre());
+            return Optional.of(rolRepository.save(rol));
+        }
+        return Optional.empty();
     }
 
     @Override
     public Optional<Rol> delete(Long id) {
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        Optional<Rol> rolOptional = rolRepository.findById(id);
+        rolOptional.ifPresent(roldb -> {
+            rolRepository.delete(roldb);
+        });
+        return Optional.empty();
     }
 
 }
