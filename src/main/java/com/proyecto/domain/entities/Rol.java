@@ -1,9 +1,7 @@
 package com.proyecto.domain.entities;
 
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +19,7 @@ public class Rol {
     private Long rol_ID;
     private String nombre;
 
-    @OneToMany(mappedBy = "rol_ID", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "rol", fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Usuarios> usuarios;
 

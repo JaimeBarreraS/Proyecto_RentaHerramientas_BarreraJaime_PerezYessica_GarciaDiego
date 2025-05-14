@@ -3,7 +3,6 @@ package com.proyecto.domain.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Id;
@@ -20,7 +19,7 @@ public class Usuarios {
     private String correo;
 
     @ManyToOne
-    @JoinColumn(name = "rol_ID", referencedColumnName = "rol_ID")
+    @JoinColumn(name = "rol_id")
     private Rol rol;
 
     public Usuarios() {
@@ -73,5 +72,4 @@ public class Usuarios {
     public void setRol_ID(Rol rol_ID) {
         this.rol = rol_ID;
     }
-
 }
