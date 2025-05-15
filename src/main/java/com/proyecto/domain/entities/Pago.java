@@ -25,7 +25,6 @@ public class Pago {
     @ManyToOne
     @JoinColumn(name = "factura_id")
     private Factura factura;
-
     
     public Pago() {
     }

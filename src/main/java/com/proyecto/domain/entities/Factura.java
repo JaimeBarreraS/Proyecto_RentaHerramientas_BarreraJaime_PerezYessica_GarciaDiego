@@ -5,7 +5,6 @@ import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
@@ -16,14 +15,13 @@ import jakarta.persistence.Table;
 public class Factura {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
     private LocalDate fechaEmision;
     private Double montoTotal;
 
     @OneToMany(mappedBy = "factura")
     private List<Pago> pagos;
-
 
     @OneToOne
     private ReservaAlquiler reservaAlquiler;

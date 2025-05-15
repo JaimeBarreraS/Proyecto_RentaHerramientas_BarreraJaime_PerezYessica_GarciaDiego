@@ -8,7 +8,7 @@ public interface IUsuarios {
 
     Optional<Usuarios> findById(Long id);
 
-    Usuarios save(Usuarios usuarios);
+    Usuarios save(Usuarios usuario);
     
     Optional<Usuarios> update(Long id, Usuarios usuarios);
 

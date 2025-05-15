@@ -2,13 +2,21 @@ package com.proyecto.infraestructure.repository.Usuarios;
 
 import java.util.List;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Service;
+
 import com.proyecto.application.service.IUsuarios;
 import com.proyecto.domain.entities.Usuarios;
 
+@Service
 public class UsuariosImpl implements IUsuarios{
-    @Autowired
+
     private UsuariosRepository usuariosRepository;
+    
+
+    public UsuariosImpl(UsuariosRepository usuariosRepository) {
+        this.usuariosRepository = usuariosRepository;
+    }
 
     @Override
     public List<Usuarios> findAll() {

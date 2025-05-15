@@ -1,6 +1,5 @@
 package com.proyecto.domain.entities;
 
-
 import jakarta.persistence.Entity;
 
 @Entity
