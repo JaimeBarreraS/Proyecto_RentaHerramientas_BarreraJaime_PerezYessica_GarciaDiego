@@ -1,22 +1,36 @@
 package com.proyecto.domain.entities;
 
+import java.util.List;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name = "usuarios")
-public class Usuarios {
+public abstract class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long usuario_ID;
     private String nombre_usuario;
     private String contrasena;
     private String correo;
+
+    @OneToMany(mappedBy = "usuarioPadre")
+    private List<Usuarios> usuarios;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_padre_id")
+    private Usuarios usuarioPadre;
 
     @ManyToOne
     @JoinColumn(name = "rol_id")
@@ -65,11 +79,28 @@ public class Usuarios {
         this.correo = correo;
     }
 
-    public Rol getRol_ID() {
+    public Rol getRol() {
         return rol;
     }
 
-    public void setRol_ID(Rol rol_ID) {
-        this.rol = rol_ID;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
+
+    public List<Usuarios> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuarios> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public Usuarios getUsuarioPadre() {
+        return usuarioPadre;
+    }
+
+    public void setUsuarioPadre(Usuarios usuarioPadre) {
+        this.usuarioPadre = usuarioPadre;
+    }
+    
 }
