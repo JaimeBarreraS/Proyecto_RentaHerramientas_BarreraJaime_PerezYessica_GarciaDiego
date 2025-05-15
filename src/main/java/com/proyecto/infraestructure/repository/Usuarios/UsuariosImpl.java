@@ -2,9 +2,7 @@ package com.proyecto.infraestructure.repository.Usuarios;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
 import com.proyecto.application.service.IUsuarios;
 import com.proyecto.domain.entities.Usuarios;
 
