@@ -1,10 +1,9 @@
 package com.proyecto.domain.entities;
 
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Proveedor")
 public class Proveedor extends Personas {
     private String rut;
     private String Empresa;
