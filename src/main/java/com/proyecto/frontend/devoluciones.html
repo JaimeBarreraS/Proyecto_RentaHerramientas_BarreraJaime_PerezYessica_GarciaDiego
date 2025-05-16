@@ -9,7 +9,8 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <h2>Indus Rental</h2>
+            <h2>Indus</h2>
+            <h2 id="r">Rental</h2>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Usuarios</a></li>
@@ -19,24 +20,29 @@
                 <li><a href="#">Reportes</a></li>
             </ul>
             <div class="settings">
-                <a href="#">Ajustes</a>
-                <a href="#">Cerrar Sesión</a>
+                <a href="#" id="a">Ajustes</a>
+                <a href="#" id="j">Cerrar Sesión</a>
             </div>
         </aside>
-        
-        <main class="main-content">
-            <header>
-                <button class="menu-btn">&#9776;</button>
-                <div class="user-info">
-                    <span>Jaime Barrera</span>
-                    <span>Administrador</span>
-                </div>
-            </header>
-            <section class="welcome">
-                <h1>Tools Rental</h1>
-                <p>Hola, Jaime Barrera. Bienvenido a Indus Rental</p>
-            </section>
-        </main>
+        <div id="sesion">
+            <button class="menu-btn">&#9776;</button>
+            <input type="text" id="buscador" placeholder="buscador">
+            <div id="cu">
+                <p id="y">Yessica Perez</p>
+                <p id="ad">Administradora</p>
+            </div>
+            <input type="text" id="buscador1" placeholder="buscador">
+            <p id="t">Tools Rental</p>
+            <p id="t1">Hola, Yessica bienvenida a Indus Rental</p>
+        </div>   
+    </div>
+    <div id="sesion1">
+        <div id="cua">
+            <p id="de">Descripción devolución</p>
+            <input type="text" id="d">
+            <p id="p">Producto</p>
+            <input type="text" id="p1" placeholder="Nombre">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
