@@ -1,7 +1,8 @@
 package com.proyecto.domain.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -16,23 +18,33 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "pagos")
+@Table(name = "reservas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pago {
+public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double monto;
+    private LocalDate fechaInicio;
 
-    private LocalDateTime fechaPago;
+    private LocalDate fechaFin;
 
     @Enumerated(EnumType.STRING)
-    private EstadoPago estado;
+    private EstadoReserva estado;
 
-    @OneToOne
-    @JoinColumn(name = "reserva_id")
-    private Reserva reserva;
+    @ManyToOne
+    @JoinColumn(name = "herramienta_id")
+    private Herramienta herramienta;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Usuario cliente;
+
+    @OneToOne(mappedBy = "reserva", cascade = CascadeType.ALL)
+    private Pago pago;
+
+    @OneToOne(mappedBy = "reserva", cascade = CascadeType.ALL)
+    private Factura factura;
 }
