@@ -14,3 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.getElementById("dev").addEventListener("click", function(){
+    location.reload(); 
+    
+});
+
