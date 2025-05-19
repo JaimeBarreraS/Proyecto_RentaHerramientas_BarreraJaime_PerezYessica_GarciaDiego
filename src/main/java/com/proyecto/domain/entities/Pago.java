@@ -1,19 +1,12 @@
 package com.proyecto.domain.entities;
 
-import java.time.LocalDateTime;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "pagos")
@@ -21,18 +14,34 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pago {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private Double monto;
-
-    private LocalDateTime fechaPago;
-
-    @Enumerated(EnumType.STRING)
-    private EstadoPago estado;
-
+    
     @OneToOne
     @JoinColumn(name = "reserva_id")
     private Reserva reserva;
+    
+    private BigDecimal monto;
+    
+    @Enumerated(EnumType.STRING)
+    private MetodoPago metodoPago;
+    
+    @Enumerated(EnumType.STRING)
+    private Estado estado = Estado.PENDIENTE;
+    
+    @Column(name = "fecha_pago")
+    private LocalDateTime fechaPago = LocalDateTime.now();
+    
+    @Column(name = "referencia_pago")
+    private String referenciaPago;
+    
+    public enum MetodoPago {
+        TARJETA_CREDITO, TARJETA_DEBITO, TRANSFERENCIA, EFECTIVO
+    }
+    
+    public enum Estado {
+        PENDIENTE, PROCESANDO, COMPLETADO, FALLIDO, REEMBOLSADO
+    }
 }

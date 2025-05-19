@@ -9,76 +9,89 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <h2>Indus Rental</h2>
+            <div class="logo">
+                <img src="images/reportes/image 72.png" alt="Logo">
+                <h2>Indus Rental<br><span>Tools Rental</span></h2>
+            </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Usuarios</a></li>
                 <li><a href="#">Facturación</a></li>
                 <li><a href="#">Historial</a></li>
                 <li><a href="#">Devoluciones</a></li>
-                <li><a href="#">Reportes</a></li>
+                <li class="active"><a href="#">Reportes</a></li>
             </ul>
             <div class="settings">
-                <a href="#">Ajustes</a>
+                <a href="#">Ajuste</a>
                 <a href="#">Cerrar Sesión</a>
             </div>
         </aside>
-        
+
         <main class="main-content">
-            <header>
-                <button class="menu-btn">&#9776;</button>
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar...">
-                    <button type="submit">Buscar</button>
+            <header class="top-bar">
+                <div class="search">
+                    <input type="text" placeholder="buscador">
+                    <img src="images/search-icon.png" alt="Buscar">
                 </div>
-                <div class="icons">
-                <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 85.png" alt="Logo-preguntas" class="Logo-preguntas">
-                <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 86.png" alt="Logo-correo" class="Logo-correo">
-                <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 84.png" alt="Logo-notificaciones" class="Logo-notificaciones">
-                </div>
-                <div class="user-info">
-                    <div class="img-user">
-                        <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 79.png" alt="Logo-usuario" class="Logo-usuario">
+                <div class="actions">
+                    <img src="images/question.png" alt="Preguntas">
+                    <img src="images/mail.png" alt="Correo">
+                    <img src="images/bell.png" alt="Notificaciones">
+                    <div class="user-profile">
+                        <img src="images/user.png" alt="Usuario">
+                        <div class="info">
+                            <span>Jaime Barrera</span>
+                            <span class="role">Administrador</span>
+                        </div>
                     </div>
-                    <span>Jaime Barrera</span>
-                    <span>Administrador</span>
                 </div>
             </header>
-            <header>
-            <section class="welcome">
-                <div class="conten-sectionWelcom">
-                    <div class="text-welcom">
-                        <h1>Tools Rental</h1>
-                        <p>Hola, Jaime Barrera. Bienvenido a Indus Rental</p>
-                    </div>
-                    <div calss= "search-tools">
-                        <input type="text" placeholder="Buscar herramientas...">
-                        <button type="submit">Buscar</button>
-                    </div>
-                    <div class="eliminar">
-                        <button class="eliminar-btn">
-                            <img class="eliminar-btn-icon" src="/src/main/java/com/proyecto/frontend/images/reportes/image 89.png" alt="">
-                        </button>
-                </div>
+
+            <section class="welcome-section">
+                <h1>Tools Rental</h1>
+                <p>Hola, Jaime Barrera. Bienvenido a Indus Rental</p>
+                <div class="tool-search">
+                    <input type="text" placeholder="buscador">
+                    <img src="images/search-icon.png" alt="Buscar">
+                    <img src="images/delete.png" class="delete-icon" alt="Eliminar">
                 </div>
             </section>
-            </header> 
-            <section class="tools">
-                <div class="tools-list">
-                    <div class="tool-item">
-                        <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 80.png" alt="Herramienta 1">
-                        <h3>Herramienta 1</h3>
-                        <p>Descripción de la herramienta 1.</p>
+
+            <section class="tool-list">
+                <div class="tool-card">
+                    <img src="images/herramienta1.png" alt="Herramienta 1">
+                    <div class="tool-info">
+                        <p><strong>Nombre:</strong> Cinta métrica</p>
+                        <p><strong>Número serial:</strong> 12345</p>
+                        <p><strong>Cantidad:</strong> 1</p>
+                        <p><strong>Precio:</strong> $5.000</p>
                     </div>
-                    <div class="tool-item">
-                        <img src="/src/main/java/com/proyecto/frontend/images/reportes/image 81.png" alt="Herramienta 2">
-                        <h3>Herramienta 2</h3>
-                        <p>Descripción de la herramienta 2.</p>
+                    <div class="favorite">&#9734;</div>
+                </div>
+
+                <div class="tool-card">
+                    <img src="images/herramienta2.png" alt="Herramienta 2">
+                    <div class="tool-info">
+                        <p><strong>Nombre:</strong> Pulidora</p>
+                        <p><strong>Número serial:</strong> 67890</p>
+                        <p><strong>Cantidad:</strong> 2</p>
+                        <p><strong>Precio:</strong> $30.000</p>
                     </div>
-                    <!-- Agregar más herramientas según sea necesario -->
+                    <div class="favorite">&#9734;</div>
+                </div>
+
+                <div class="tool-card">
+                    <img src="images/herramienta3.png" alt="Herramienta 3">
+                    <div class="tool-info">
+                        <p><strong>Nombre:</strong> Carretilla</p>
+                        <p><strong>Número serial:</strong> 54321</p>
+                        <p><strong>Cantidad:</strong> 1</p>
+                        <p><strong>Precio:</strong> $10.000</p>
+                    </div>
+                    <div class="favorite">&#9734;</div>
+                </div>
             </section>
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

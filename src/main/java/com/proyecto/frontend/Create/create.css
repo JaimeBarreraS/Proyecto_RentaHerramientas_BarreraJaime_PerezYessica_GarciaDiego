@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #5358eb;
+}
+
+.container {
+    display: flex;
+}
+
+#cuadro{
+    width: 40vw;
+    height: 30vw;
+    background-color: white;
+    margin-left: 30vw;
+    margin-top: 9vw;
+    border-radius: 2vw;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cuadro:hover{
+    transform: translateY(-0.5vw);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+p{
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 2vw;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 10vw;
+}
+
+input{
+    width: 25vw;
+    height: 2.5vw;
+    padding-left: 1vw;
+    font-size: 1.5vw;
+}
+
+#u{
+    width: 3vw;
+    position: absolute;
+    margin-top: -10.8vw;
+    margin-left: 5vw;
+}
+
+#e{
+    width: 3vw;
+    position: absolute;
+    margin-top: -6.7vw;
+    margin-left: 5vw;
+}
+
+#c{
+    width: 3vw;
+    position: absolute;
+    margin-top: -3vw;
+    margin-left: 5vw; 
+}
+
+#pas{
+    position: relative;
+    width: 25vw;
+    height: 2.5vw;
+    margin-left: 10vw;
+    margin-top: 2vw;
+}
+
+#pas input{
+    width: 25vw;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 3vw;
+}
+
+#botones button{
+    width: 8vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #5358eb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botones button:hover{
+    background-color: #3c41c8;
+}

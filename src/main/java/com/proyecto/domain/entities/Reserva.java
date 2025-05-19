@@ -1,21 +1,13 @@
 package com.proyecto.domain.entities;
 
-import java.time.LocalDate;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "reservas")
@@ -23,28 +15,38 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reserva {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private LocalDate fechaInicio;
-
-    private LocalDate fechaFin;
-
-    @Enumerated(EnumType.STRING)
-    private EstadoReserva estado;
-
-    @ManyToOne
-    @JoinColumn(name = "herramienta_id")
-    private Herramienta herramienta;
-
-    @ManyToOne
+    
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id")
     private Usuario cliente;
-
-    @OneToOne(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private Pago pago;
-
-    @OneToOne(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private Factura factura;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "herramienta_id")
+    private Herramienta herramienta;
+    
+    @Column(name = "fecha_inicio")
+    private LocalDate fechaInicio;
+    
+    @Column(name = "fecha_fin")
+    private LocalDate fechaFin;
+    
+    @Column(name = "total_pago")
+    private BigDecimal totalPago;
+    
+    @Enumerated(EnumType.STRING)
+    private Estado estado = Estado.PENDIENTE;
+    
+    @Column(name = "fecha_reserva")
+    private LocalDateTime fechaReserva = LocalDateTime.now();
+    
+    private String observaciones;
+    
+    public enum Estado {
+        PENDIENTE, CONFIRMADA, EN_CURSO, COMPLETADA, CANCELADA
+    }
 }
+

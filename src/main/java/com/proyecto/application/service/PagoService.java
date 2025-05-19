@@ -2,9 +2,14 @@ package com.proyecto.application.service;
 
 import java.util.List;
 
-import com.proyecto.domain.entities.Pago;
+import com.proyecto.domain.DTOs.PagoDTO;
 
 public interface PagoService {
-    Pago procesarPago(Pago pago);
-    List<Pago> obtenerTodos();
+    List<PagoDTO> findAll();
+    PagoDTO findById(Long id);
+    PagoDTO save(PagoDTO pagoDTO);
+    PagoDTO update(Long id, PagoDTO pagoDTO);
+    void delete(Long id);
+    PagoDTO findByReservaId(Long reservaId);
+    PagoDTO procesarPago(Long reservaId, PagoDTO pagoDTO);
 }
