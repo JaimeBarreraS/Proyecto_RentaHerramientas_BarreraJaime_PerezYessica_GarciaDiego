@@ -10,36 +10,38 @@
 <body>
     <div class="container">
         <aside class="sidebar">
+            <img src="Imagenes/image 72.png" id="logo">
             <h2>Indus</h2>
             <h2 id="r">Rental</h2>
             <h4>Tools Rental</h4>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="usuario.html">Usuarios</a></li>
-                <li><a href="factura/factura.html">Facturación</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="devoluciones.html">Devoluciones</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li id="active"><a href="">Usuarios</a></li>
+                <li><a href="../Factura/factura.html">Facturación</a></li>
+                <li><a href="../Historial/historial.html">Historial</a></li>
+                <li><a href="../Devoluciones/devoluciones.html">Devoluciones</a></li>
+                <li><a href="../reportes.html">Reportes</a></li>
             </ul>
             <div class="settings">
                 <a href="#" id="a">Ajustes</a>
-                <a href="#" id="j">Cerrar Sesión</a>
+                <a href="../login/login.html" id="j">Cerrar Sesión</a>
             </div>
             <div id="imagenes">
                 <img src="Imagenes/icons8-home-30.png" id="h">
-                <img src="Imagenes/icons8-user-50.png" id="u">
-                <img src="Imagenes/icons8-invoice-48.png" id="i">
-                <img src="Imagenes/icons8-clock-50.png" id="c">
-                <img src="Imagenes/icons8-refund-64.png" id="re">
-                <img src="Imagenes/icons8-reports-80.png" id="rep">
-                <img src="Imagenes/icons8-settings-50.png" id="s">
-                <img src="Imagenes/icons8-log-out-32.png" id="l">
+                <img src="Imagenes/user.png" id="u">
+                <img src="Imagenes/invoice.png" id="i">
+                <img src="Imagenes/oclock.png" id="c">
+                <img src="Imagenes/return.png" id="re">
+                <img src="Imagenes/reports.png" id="rep">
+                <img src="Imagenes/setting.png" id="s">
+                <img src="Imagenes/salir.png" id="l">
             </div>
         </aside>
         <div id="sesion">
             <button class="menu-btn">&#9776;</button>
             <input type="text" id="buscador" placeholder="buscador">
             <div id="cu">
+                <img src="Imagenes/image 79.png" id="user">
                 <p id="y">Yessica Perez</p>
                 <p id="ad">Administradora</p>
             </div>
@@ -47,12 +49,14 @@
             <img src="Imagenes/image 84.png" id="ca">
             <img src="Imagenes/image 86.png" id="me">
             <img src="Imagenes/image 85.png" id="si">
-            <div id="cu1">
+            <button id="cu1">
+                <a href="../"></a>
                 <p>Proveedores</p>
-            </div>
-            <div id="cu2">
+            </button>
+            <button id="cu2">
+                <a href=""></a>
                 <p>Clientes</p>
-            </div>
+            </button>
         </div> 
     </div>
     <div id="sesion1">
@@ -62,12 +66,34 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
             </div>
         </div>
-        <div id="im"></div>
-        <div id="im1"></div>
-        <div id="im2"></div>
-        <div id="im3"></div>
-        <div id="im4"></div>
-        <div id="im5"></div>
+
+        <div id="ima">
+            <div id="im">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+            <div id="im1">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+            <div id="im2">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+            <div id="im3">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+            <div id="im4">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+            <div id="im5">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="info">hola</p>
+            </div>
+        </div>
+        
     </div>  
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

@@ -10,34 +10,38 @@ body {
 .login-box {
     background: #fff;
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 2vw;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    width: 300px;
+    width: 40vw;
+    height: 30vw;
     text-align: center;
 }
 .login-box h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 5rem;
 }
 .input-group {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+    width: 30vw;
+    margin-bottom: 2rem;
+    margin-left: 5vw;
 }
-.input-group .icon {
-    margin-right: 0.5rem;
+.input-group .icon { 
+    margin-right: 1rem;
 }
 .input-group input {
     border: none;
     outline: none;
     width: 100%;
     padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
 }
 .create-account {
     display: block;
     margin: 1rem 0;
     font-size: 0.9rem;
     color: #555;
+    padding: 1vw;
 }
 button {
     background: #295389;
