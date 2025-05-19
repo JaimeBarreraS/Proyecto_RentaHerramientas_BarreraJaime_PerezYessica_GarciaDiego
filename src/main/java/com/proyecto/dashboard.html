@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Bienvenido al Panel de Usuario</h1>
+    
+    <p id="user-info"></p> <!-- Mostrará el nombre y rol -->
+
+    <div id="admin-section" class="hidden">
+        <h2>Opciones de Administrador</h2>
+        <button onclick="gestionarUsuarios()">Gestionar Usuarios</button>
+        <button onclick="verPagos()">Ver Pagos</button>
+    </div>
+
+    <div id="proveedor-section" class="hidden">
+        <h2>Opciones de Proveedor</h2>
+        <button onclick="gestionarHerramientas()">Gestionar Herramientas</button>
+        <button onclick="verReservas()">Ver Reservas</button>
+    </div>
+
+    <div id="cliente-section" class="hidden">
+        <h2>Opciones de Cliente</h2>
+        <button onclick="verHerramientas()">Ver Herramientas</button>
+        <button onclick="hacerReserva()">Hacer Reserva</button>
+    </div>
+
+    <button onclick="cerrarSesion()">Cerrar Sesión</button> <!-- Botón de cierre de sesión -->
+
+    <script src="roles.js"></script>
+</body>
+</html>
