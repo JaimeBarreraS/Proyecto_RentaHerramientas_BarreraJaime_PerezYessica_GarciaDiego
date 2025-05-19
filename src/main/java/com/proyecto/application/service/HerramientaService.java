@@ -1,12 +1,17 @@
 package com.proyecto.application.service;
 
+import com.proyecto.domain.DTOs.HerramientaDTO;
+import java.time.LocalDate;
 import java.util.List;
 
-import com.proyecto.domain.entities.Herramienta;
-
 public interface HerramientaService {
-    Herramienta agregarHerramienta(Herramienta herramienta);
-    List<Herramienta> obtenerHerramientasDisponibles();
-    List<Herramienta> obtenerTodas();
-    Herramienta obtenerPorId(Long id);
+    List<HerramientaDTO> findAll();
+    HerramientaDTO findById(Long id);
+    HerramientaDTO save(HerramientaDTO herramientaDTO);
+    HerramientaDTO update(Long id, HerramientaDTO herramientaDTO);
+    void delete(Long id);
+    List<HerramientaDTO> findByCategoria(String categoria);
+    List<HerramientaDTO> findByProveedorId(Long proveedorId);
+    List<HerramientaDTO> findHerramientasDisponibles(LocalDate fechaInicio, LocalDate fechaFin);
+    List<String> findCategorias();
 }

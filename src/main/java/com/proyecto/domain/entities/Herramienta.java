@@ -1,21 +1,14 @@
 package com.proyecto.domain.entities;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "herramientas")
@@ -27,26 +20,33 @@ public class Herramienta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    @NotBlank
     private String nombre;
-
-    @Column(length = 1000)
+    
     private String descripcion;
-
-    private Double precioAlquiler;
-
-    private Boolean disponible;
-
-    private String urlImagen;
-
-    @ManyToOne
+    
+    @NotBlank
+    private String categoria;
+    
+    @Positive
+    @Column(name = "precio_dia")
+    private BigDecimal precioPorDia;
+    
+    @Enumerated(EnumType.STRING)
+    private Estado estado = Estado.DISPONIBLE;
+    
+    @Column(name = "imagen_url")
+    private String imagenUrl;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "proveedor_id")
     private Usuario proveedor;
-
-    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
-    private List<Reserva> reservas;
-
-    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
-    private List<ReporteDano> reportesDano;
-
+    
+    @Column(name = "fecha_registro")
+    private LocalDateTime fechaRegistro = LocalDateTime.now();
+    
+    public enum Estado {
+        DISPONIBLE, ALQUILADA, MANTENIMIENTO, NO_DISPONIBLE
+    }
 }
