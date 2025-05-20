@@ -36,7 +36,7 @@ document.querySelector(".login-box").addEventListener("submit", async (event) =>
                     window.location.href = "dashboard.html";
                     break;
                 case "ADMIN":
-                    window.location.href = "../Usuario/usuario.html";
+                    window.location.href = "../Administrador/administrador/usuario.html";
                     break;
                 default:
                     alert("Rol desconocido, contacta al soporte.");
