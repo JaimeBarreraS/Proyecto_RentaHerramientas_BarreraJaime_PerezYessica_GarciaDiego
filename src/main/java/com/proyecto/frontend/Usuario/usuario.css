@@ -9,7 +9,7 @@ body {
 
 .sidebar {
     width: 20vw;
-    background-color: #5358eb;
+    background: #295389;
     color: white;
     padding: 20px;
     position: fixed;
@@ -53,7 +53,7 @@ body {
 }
 
 #active{
-    background-color: #3f43c9;
+    background: #377dd8;
     border-radius: 1vw;
     width: 15vw;
     height: 2.3vw;
@@ -171,7 +171,7 @@ body {
 
 .settings a:hover{
     border-radius: 1vw;
-    background-color: #3f43c9;
+    background: #377dd8;
     width: 10vw;
     height: 2vw;
 }
@@ -196,7 +196,7 @@ h4{
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #5358eb, #3f43c9);
+    background: #295389;
     width: 100vw;
     height: 12vw;
 }
