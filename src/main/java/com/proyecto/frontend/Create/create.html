@@ -12,13 +12,13 @@
             <p>Create Account</p>
 
             <div id="formulario">
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="E-mail">
+                <input type="text" id="register-nombre" placeholder="Nombre" required>
+                <input type="email" id="register-email" placeholder="E-mail" required>
             </div>
 
             <div id="pas">
-                <input type="password" placeholder="Password" id="pass">
-                <input type="number" placeholder="Telefono" id="tel">
+                <input type="password" placeholder="Password" id="pass" required>
+                <input type="number" placeholder="Telefono" id="tel" required>
             </div>
 
             <img src="Imagenes/icons8-user-50.png" id="u">
@@ -27,18 +27,20 @@
             <img src="Imagenes/icons8-phone-50.png" id="phone">
 
             <select id="opciones" required name="Opciones">
-                <option value=""> Rol</option>
-                <option value="opcion1"> Usuario</option>
-                <option value="opcion2"> Proveedor</option>
-                <option value="opcion3"> Administrador</option>
+                <option value="">Seleccionar Rol</option>
+                <option value="CLIENTE">Cliente</option>
+                <option value="PROVEEDOR">Proveedor</option>
+                <option value="ADMIN">Administrador</option>
             </select>
 
             <div id="botones">
-                <button>SING UP</button>
-                <button>SING IN</button>
-                <button><a href="../inicio.html" id="lo">LOGIN</a></button>
+                <button id="signup-btn">SIGN UP</button>  
+                <button>SIGN IN</button>  
+                <button><a href="../login/login.html" id="lo">LOGIN</a></button>
             </div>
         </div>
     </div>
+
+    <script src="../Create/script.js"></script>
 </body>
 </html>

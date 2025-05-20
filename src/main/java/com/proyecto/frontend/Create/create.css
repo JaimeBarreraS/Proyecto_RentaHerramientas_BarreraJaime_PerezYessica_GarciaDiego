@@ -79,11 +79,11 @@ input{
 }
 
 #tel{
-    width: 25vw;
+    width: 26vw;
     height: 1.7vw;
     position: absolute;
-    margin-top: 4vw;
-    margin-left: -25vw;
+    margin-top: 2.2vw;
+
 }
 
 #pas{
@@ -101,9 +101,13 @@ select{
     border: 1px solid #ccc;
     padding: 0.5vw;
     border-radius: 0.5vw;
-    margin-top: 5vw;
-    margin-left: 9.5vw;
-    color: black;
+    margin-top: 5.5vw;
+    margin-left: 14vw;
+    color: rgb(0, 0, 0);
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
 }
 
 #pas input{
