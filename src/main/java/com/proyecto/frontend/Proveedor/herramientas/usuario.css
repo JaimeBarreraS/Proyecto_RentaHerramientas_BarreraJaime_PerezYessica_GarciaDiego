@@ -20,18 +20,13 @@ body {
     z-index: 2;
 }
 
-#logo{
-    margin-top: 3vw;
-    margin-left: 2vw;
-}
-
 .sidebar.show {
     left: 0;
 }
 
 .sidebar h2 {
     text-align: center;
-    margin-top: -6vw;
+    margin-top: -7vw;
     font-size: 2.2vw;
     margin-left: 4.5vw;
 }
@@ -53,7 +48,7 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 6vw;
+    margin-top: 10vw;
     margin-left: 5vw;
 }
 
@@ -95,7 +90,7 @@ body {
     position: absolute;
     color: white;
     text-decoration: none;
-    top: 45vw;
+    top: 42vw;
     font-size: 1.2vw;
 }
 
@@ -105,17 +100,9 @@ body {
     object-fit: contain;
 }
 
-#h{
-    position: absolute;
-    margin-top: -16vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
 #u{
     position: absolute;
-    margin-top: -12.5vw;
+    margin-top: -5.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -123,23 +110,7 @@ body {
 
 #i{
     position: absolute;
-    margin-top: -8.2vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
-#c{
-    position: absolute;
-    margin-top: -4.6vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
-#re{
-    position: absolute;
-    margin-top: -0.2vw;
+    margin-top: -1vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -153,17 +124,9 @@ body {
     height: 1.8vw;
 }
 
-#s{
-    position: absolute;
-    margin-top: 9.5vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
 #l{
     position: absolute;
-    margin-top: 12.5vw;
+    margin-top: 18vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -195,7 +158,7 @@ h4{
     cursor: pointer;
     margin-top: 2vw;
     margin-left: 5vw;
-}
+} /*hasta aqui copiar*/
 
 #sesion{
     position: fixed;
