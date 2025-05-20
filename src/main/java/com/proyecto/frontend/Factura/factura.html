@@ -9,34 +9,101 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <h2>Indus Rental</h2>
+            <img src="Imagenes/image 72.png">
+            <h2>Indus</h2>
+            <h2 id="r">Rental</h2>
+            <h4>Tools Rental</h4>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Facturación</a></li>
-                <li><a href="#">Historial</a></li>
-                <li><a href="#">Devoluciones</a></li>
-                <li><a href="#">Reportes</a></li>
+                <li><a href="../Inicio/inicio.html">Inicio</a></li>
+                <li><a href="../Usuario/usuario.html">Usuarios</a></li>
+                <li id="active"><a href="../Factura/factura.html">Facturación</a></li>
+                <li><a href="../Historial/historial.html">Historial</a></li>
+                <li><a href="../Devoluciones/devoluciones.html">Devoluciones</a></li>
+                <li><a href="../Reportes/reportes.html">Reportes</a></li>
             </ul>
             <div class="settings">
-                <a href="#">Ajustes</a>
-                <a href="#">Cerrar Sesión</a>
+                <a href="#" id="a">Ajustes</a>
+                <a href="../login/login.html" id="j">Cerrar Sesión</a>
+            </div>
+            <div id="imagenes">
+                <img src="Imagenes/icons8-home-30.png" id="h">
+                <img src="Imagenes/user.png" id="u">
+                <img src="Imagenes/invoice.png" id="i">
+                <img src="Imagenes/oclock.png" id="c">
+                <img src="Imagenes/return.png" id="re">
+                <img src="Imagenes/reports.png" id="rep">
+                <img src="Imagenes/setting.png" id="s">
+                <img src="Imagenes/salir.png" id="l">
             </div>
         </aside>
-        
-        <main class="main-content">
-            <header>
-                <button class="menu-btn">&#9776;</button>
-                <div class="user-info">
-                    <span>Jaime Barrera</span>
-                    <span>Administrador</span>
+        <div id="sesion">
+            <button class="menu-btn">&#9776;</button>
+            <input type="text" id="buscador" placeholder="buscador">
+            <div id="cu">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="y">Yessica Perez</p>
+                <p id="ad">Administradora</p>
+            </div>
+            <input type="text" id="buscador1" placeholder="buscador">
+            <p id="t">Tools Rental</p>
+            <p id="t1">Hola, bienvenidos a Indus Rental</p>
+            <img src="Imagenes/image 84.png" id="ca">
+            <img src="Imagenes/image 86.png" id="me">
+            <img src="Imagenes/image 85.png" id="si">
+        </div>   
+    </div>
+
+    <div id="sesion1">
+        <p id="fac">FACTURA</p>
+        <div id="in">
+            <input type="number" placeholder="Número de factura" id="num">
+            <input type="date" placeholder="Fecha" id="fe">
+            <input type="number" placeholder="Número cliente" id="nuc">
+            <input type="text" placeholder="Dirección" id="di">
+        </div>
+
+        <div class="form-wrapper">
+            <div class="form-row">
+                <div>
+                    <p>Descripción</p>
+                    <textarea  id="des1" placeholder=""></textarea>
                 </div>
-            </header>
-            <section class="welcome">
-                <h1>Tools Rental</h1>
-                <p>Hola, Jaime Barrera. Bienvenido a Indus Rental</p>
-            </section>
-        </main>
+                <div>
+                    <p>Cantidad</p>
+                    <input type="number" id="can1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <p>Precio</p>
+                    <input type="number" id="pre1">
+                </div>
+                <div>
+                    <p>Impuesto</p>
+                    <input type="number" id="im1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <p>Subtotal</p>
+                    <input type="number" id="sub1">
+                </div>
+                <div>
+                    <p>Descuento</p>
+                    <input type="number" id="de1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <p>Total</p>
+                    <input type="number" id="to1">
+                </div>
+            </div>
+        </div>
+        <button id="ge"><a href="" id="ge1"> Generar factura</a></button>
     </div>
     <script src="script.js"></script>
 </body>
