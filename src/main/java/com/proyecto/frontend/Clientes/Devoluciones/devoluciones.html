@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indus Rental Dashboard</title>
+    <link rel="stylesheet" href="devoluciones.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="Imagenes/image 72.png">
+            <h2>Indus</h2>
+            <h2 id="r">Rental</h2>
+            <h4>Tools Rental</h4>
+            <ul>
+                <li><img class="icons-sedebar" src="./img/icons8-home-30.png" alt=""><a href="../Reportes/inicio.html">Inicio</a></li>
+                <li><img class="icons-sedebar" src="./img/invoice.png" alt=""><a href="../reserva/factura.html">Facturación</a></li>
+                <li><img class="icons-sedebar" src="./img/oclock.png" alt=""><a href="../pagos/historial.html">Historial</a></li>
+                <li><img class="icons-sedebar" src="./img/return.png" alt=""><a href="../Devoluciones/devoluciones.html">Devoluciones</a></li>
+                <li class="active"><img class="icons-sedebar" src="./img/reports.png" alt=""><a href="../alquileres/reportes.html">Reportes</a></li>
+                <li><img class="icons-sedebar" src="./img/salir.png" alt=""><a href="../login/login.html">Cerrar Sesión</a></li>
+            </ul>
+
+            <div id="imagenes">
+                <img src="Imagenes/icons8-home-30.png" id="h">
+                <img src="Imagenes/user.png" id="u">
+                <img src="Imagenes/invoice.png" id="i">
+                <img src="Imagenes/oclock.png" id="c">
+                <img src="Imagenes/return.png" id="re">
+                <img src="Imagenes/reports.png" id="rep">
+                <img src="Imagenes/setting.png" id="s">
+                <img src="Imagenes/salir.png" id="l">
+            </div>
+        </aside>
+        <div id="sesion">
+            <button class="menu-btn">&#9776;</button>
+            <input type="text" id="buscador" placeholder="buscador">
+            <div id="cu">
+                <img src="Imagenes/image 79.png" id="foto">
+                <p id="y">Yessica Perez</p>
+                <p id="ad">Administradora</p>
+            </div>
+            <input type="text" id="buscador1" placeholder="buscador">
+            <p id="t">Tools Rental</p>
+            <p id="t1">Hola, bienvenidos a Indus Rental</p>
+            <img src="Imagenes/image 84.png" id="ca">
+            <img src="Imagenes/image 86.png" id="me">
+            <img src="Imagenes/image 85.png" id="si">
+        </div>   
+    </div>
+    <div id="sesion1">
+        <p id="de">Descripción devolución</p>
+        <textarea type="text" id="d" placeholder=""></textarea>
+        <p id="p">Producto</p>
+        <input type="text" id="p1" placeholder="Nombre">
+        <p id="pe">Precio</p>
+        <input type="text" placeholder="Precio" id="pe1">
+        <button id="dev">DEVOLVER</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
