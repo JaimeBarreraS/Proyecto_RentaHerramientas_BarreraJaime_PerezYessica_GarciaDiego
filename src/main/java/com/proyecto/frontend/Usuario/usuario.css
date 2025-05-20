@@ -37,15 +37,12 @@ body {
     margin-left: 5vw;
 }
 
-.sidebar li:hover{
-    background-color: #3f43c9;
+.sidebar li{
     width: 15vw;
     height: 2vw;
+    padding: 0.5vw 1vw;
     border-radius: 1vw;
-}
-
-.sidebar ul li a{
-    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar ul {
@@ -59,19 +56,26 @@ body {
     background-color: #3f43c9;
     border-radius: 1vw;
     width: 15vw;
-    height: 2vw;
+    height: 2.3vw;
     padding-left: 4vw;
     margin-left: -4vw;
 }
 
 .sidebar ul li {
     margin: 35px 0;
+    width: 10vw;
+    background-color: background-color 0.3s ease;
 }
 
 .sidebar ul li a {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 1.2vw;
+}
+
+.sidebar li:hover{
+    background-color: #3f43c9;
+    width: 10vw;
 }
 
 #a{
@@ -98,7 +102,7 @@ body {
 
 #h{
     position: absolute;
-    margin-top: -17.3vw;
+    margin-top: -18.3vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -106,7 +110,7 @@ body {
 
 #u{
     position: absolute;
-    margin-top: -13.2vw;
+    margin-top: -14.2vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -146,7 +150,7 @@ body {
 
 #s{
     position: absolute;
-    margin-top: 10.5vw;
+    margin-top: 9vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -154,7 +158,7 @@ body {
 
 #l{
     position: absolute;
-    margin-top: 13.5vw;
+    margin-top: 12vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -168,7 +172,7 @@ body {
 .settings a:hover{
     border-radius: 1vw;
     background-color: #3f43c9;
-    width: 15vw;
+    width: 10vw;
     height: 2vw;
 }
 
@@ -212,10 +216,11 @@ h4{
 
 #buscador1{
     background-color: #eeeeee;
-    width: 37vw;
+    width: 17vw;
     height: 2.5vw;
-    margin-left: 55vw;
-    margin-top: 2vw;
+    position: absolute;
+    margin-left: 24vw;
+    margin-top: 8vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -226,15 +231,15 @@ h4{
 #cu{
     background-color: #eeeeee;
     width: 12vw;
-    height: 3.5vw;
+    height: 2.8vw;
     border-radius: 2vw;
-    margin-left: 85vw;
-    margin-top: -3vw;
+    margin-left: 87vw;
+    margin-top: -4.5vw;
     position: absolute;
 }
 
 #user{
-    width: 4.2vw;
+    width: 3.2vw;
     margin-top: -0.2vw;
 }
 
@@ -242,40 +247,39 @@ h4{
     font-size: 1vw;
     margin-left: 4.5vw;
     position: absolute;
-    margin-top: -3.7vw;
+    margin-top: -3vw;
 }
 
 #ad{
     margin-left: 4vw;
     position: absolute;
-    margin-top: -2.5vw;
+    margin-top: -2vw;
 }
 
 #ca{
-    width: 3vw;
-    margin-top: -14vw;
+    width: 2vw;
+    margin-top: -5vw;
     margin-left: 78vw;
 }
 
 #me{
-    width: 3vw;
-    margin-top: -17vw;
+    width: 2vw;
+    margin-top: -8vw;
     margin-left: 72vw;
 }
 
 #si{
-    width: 3vw;
-    margin-top: -20vw;
+    width: 2vw;
+    margin-top: -11vw;
     margin-left: 66vw;
 }
 
 #cu1{
-    width: 12vw;
+    width: 10vw;
     height: 2.8vw;
     background-color: #eeeeee;
     border-radius: 2vw;
     position: absolute;
-    margin-top: -6vw;
     margin-left: -39vw;
     font-size: 1.2vw;
     padding-top: 0.5vw;
@@ -283,12 +287,11 @@ h4{
 }
 
 #cu2{
-    width: 12vw;
+    width: 10vw;
     height: 2.8vw;
     background-color: #eeeeee;
     border-radius: 2vw;
     position: absolute;
-    margin-top: -6vw;
     margin-left: -55vw;
     font-size: 1.2vw;
     padding-top: 0.5vw;
