@@ -20,56 +20,32 @@ body {
     z-index: 2;
 }
 
-#logo{
-    margin-top: 3vw;
-    margin-left: 2vw;
-}
-
 .sidebar.show {
     left: 0;
 }
 
 .sidebar h2 {
     text-align: center;
-    margin-top: -6vw;
+    margin-top: -7vw;
+    margin-left: 4vw;
     font-size: 2.2vw;
-    margin-left: 4.5vw;
 }
 
 #r{
-    margin-top: -1vw;
+    margin-top: -0.2vw;
     font-size: 2.2vw;
     margin-left: 5vw;
-}
-
-.sidebar li{
-    width: 15vw;
-    height: 2vw;
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
-    transition: background-color 0.3s ease;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin-top: 6vw;
-    margin-left: 5vw;
-}
-
-#active{
-    background: #377dd8;
-    border-radius: 1vw;
-    width: 15vw;
-    height: 2.3vw;
-    padding-left: 4vw;
-    margin-left: -4vw;
+    margin-left: 5vw; 
 }
 
 .sidebar ul li {
     margin: 35px 0;
-    width: 10vw;
-    background-color: background-color 0.3s ease;
 }
 
 .sidebar ul li a {
@@ -78,16 +54,31 @@ body {
     font-size: 1.2vw;
 }
 
+.sidebar li{
+    width: 10vw;
+    height: 2vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+}
+
 .sidebar li:hover{
     background: #377dd8;
-    width: 10vw;
+    border-radius: 1vw;
+    height: 2vw;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 1.2vw;
 }
 
 #a{
     position: absolute;
     color: white;
     text-decoration: none;
-    top: 42vw;
+    top: 43vw;
     font-size: 1.2vw;
 }
 
@@ -95,7 +86,7 @@ body {
     position: absolute;
     color: white;
     text-decoration: none;
-    top: 45vw;
+    top: 46vw;
     font-size: 1.2vw;
 }
 
@@ -107,7 +98,7 @@ body {
 
 #h{
     position: absolute;
-    margin-top: -16vw;
+    margin-top: -18.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -115,7 +106,7 @@ body {
 
 #u{
     position: absolute;
-    margin-top: -12.5vw;
+    margin-top: -14.3vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -123,7 +114,7 @@ body {
 
 #i{
     position: absolute;
-    margin-top: -8.2vw;
+    margin-top: -10vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -131,7 +122,7 @@ body {
 
 #c{
     position: absolute;
-    margin-top: -4.6vw;
+    margin-top: -5.8vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -139,7 +130,7 @@ body {
 
 #re{
     position: absolute;
-    margin-top: -0.2vw;
+    margin-top: -1.2vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -163,10 +154,20 @@ body {
 
 #l{
     position: absolute;
-    margin-top: 12.5vw;
+    margin-top: 12.7vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
+}
+
+#active{
+    background: #377dd8;
+    border-radius: 1vw;
+    width: 15vw;
+    height: 2.3vw;
+    padding-left: 4vw;
+    margin-left: -4vw;
+    padding-top: 0.5vw;
 }
 
 .settings{
@@ -182,9 +183,8 @@ body {
 }
 
 h4{
-    margin-left: 8.3vw;
+    margin-left: 7.8vw;
     font-size: 1vw;
-    margin-top: -0.5vw;
 }
 
 .menu-btn {
@@ -194,13 +194,10 @@ h4{
     font-size: 2vw;
     cursor: pointer;
     margin-top: 2vw;
-    margin-left: 5vw;
+    margin-left: 7vw;
 }
 
 #sesion{
-    position: fixed;
-    top: 0;
-    left: 0;
     background: #295389;
     width: 100vw;
     height: 12vw;
@@ -210,8 +207,8 @@ h4{
     background-color: #eeeeee;
     width: 37vw;
     height: 2.5vw;
-    margin-left: 17vw;
-    margin-top: -1vw;
+    margin-left: 15vw;
+    margin-top: -1.5vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -224,7 +221,7 @@ h4{
     width: 17vw;
     height: 2.5vw;
     position: absolute;
-    margin-left: 20vw;
+    margin-left: 18vw;
     margin-top: 8vw;
     border-radius: 2vw;
     text-decoration: none;
@@ -236,178 +233,157 @@ h4{
 #cu{
     background-color: #eeeeee;
     width: 12vw;
-    height: 2.5vw;
+    height: 2.8vw;
     border-radius: 2vw;
-    margin-left: 87vw;
-    margin-top: -3vw;
+    margin-left: 85vw;
+    margin-top: -4vw;
     position: absolute;
 }
 
-#user{
+#foto{
     width: 3vw;
-    margin-top: -0.2vw;
 }
 
 #y{
     font-size: 1vw;
     margin-left: 4.5vw;
     position: absolute;
-    margin-top: -2.7vw;
+    margin-top: -2.9vw;
 }
 
 #ad{
-    margin-left: 4.5vw;
+    margin-left: 4vw;
     position: absolute;
-    margin-top: -1.5vw;
+    margin-top: -1.8vw;
+}
+
+#t{
+    font-size: 2vw;
+    margin-top: 2vw;
+    margin-left: 7vw;
+    color: white;
+}
+
+#t1{
+    font-size: 1.3vw;
+    margin-top: 0.2vw;
+    margin-left: 7vw;
+    color: white;
 }
 
 #ca{
-    width: 2.5vw;
-    margin-top: -3.8vw;
+    width: 2vw;
+    position: absolute;
+    margin-top: -8vw;
     margin-left: 78vw;
 }
 
 #me{
-    width: 2.5vw;
-    margin-top: -6.5vw;
+    width: 2vw;
+    position: absolute;
+    margin-top: -8vw;
     margin-left: 72vw;
 }
 
 #si{
-    width: 2.5vw;
-    margin-top: -9.5vw;
+    width: 2vw;
+    position: absolute;
+    margin-top: -8vw;
     margin-left: 66vw;
-}
-
-#cu1{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-left: -39vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
-}
-
-#cu2{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-left: -55vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
 }
 
 #sesion1{
     background-color: #f5f6ff;
     width: 100vw;
-    height: 37vw;
-    margin-top: 12vw;
-    padding: 2vw;
-    box-sizing: border-box;
+    height: 37.7vw;
+    margin-top: -1.5vw;
 }
 
-.card{
-    margin-left: 68vw;
-    width: 25vw;
-    height: 25vw;
-    margin-top: 5vw;
-    border: 0.1vw solid #3f43c9;
-}
-
-.card-img-top{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10vw;
-}
-
-.card-text{
-    font-size: 1.3vw;
-}
-
-#ima{
+#fac{
+    font-size: 1.5vw;
     position: absolute;
-    margin-top: -10vw;
-}
-
-#foto{
-    margin-left: 2.5vw;
-    width: 7vw;
-}
-
-#im{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 5vw;
-    margin-top: -18vw;
-    border-radius: 1vw;
-}
-
-#im1{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 25vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im2{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 45vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im3{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 5vw;
     margin-top: 3vw;
-    border-radius: 1vw;
-}
-
-#im4{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 25vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im5{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
     margin-left: 45vw;
-    margin-top: -14vw;
+}
+
+#in{
+    margin-left: 15vw;
+}
+
+#num{
+    width: 10vw;
+    height: 2vw;
+    margin-left: 2vw;
+    margin-top: 6vw;
+}
+
+#fe{
+    width: 10vw;
+    height: 2vw;
+    margin-left: 10vw;
+}
+
+#nuc{
+    width: 10vw;
+    height: 2vw;
+    margin-left: 10vw;
+}
+
+#di{
+    width: 10vw;
+    height: 2vw;
+    margin-left: 10vw;
+}
+
+.form-wrapper{
+    width: 90vw;
+    margin: 2vw auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+}
+
+.form-row p{
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.form-row input,
+.form-row textarea{
+    width: 100%;
+    height: 2.5vw;
+    padding: 0.5vw;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#ge{
+    width: 10vw;
+    height: 2.5vw;
+    background: #295389;
+    position: absolute;
+    margin-top: -5vw;
+    margin-left: 65vw;
     border-radius: 1vw;
 }
 
-#info{
-    font-size: 1.1vw;
-    text-align: center;
+#ge:hover{
+    background: #377dd8;
 }
 
-input, button{
-    transition: all 0.3s ease;
-}
-
-input:focus{
-    outline: none;
-    box-shadow:  0 0 0.4vw #5358eb80;
-    border:  1px solid #5358eb;
+#ge1{
+    color: white;
+    text-decoration: none;
+    font-size: 1vw;
 }
 
 .sidebar ul li a:hover{
@@ -420,8 +396,7 @@ input:focus{
     cursor: pointer;
 }
 
-#ca:hover, #me:hover, #si:hover, #u:hover, #i:hover, 
-#c:hover, #re:hover, #rep:hover, #s:hover, #l:hover{
+#ca:hover, #me:hover, #si:hover{
     transform: scale(1.2);
 }
 
@@ -434,25 +409,13 @@ input:focus{
     border: 1px solid #5358eb;
 }
 
-#buscador, #buscador1{
+#buscador, #buscador1, #d{
     background-color: #e4e6ff;
     border: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
-#buscador:focus, #buscador1:focus{
+#buscador:focus, #buscador1:focus, #d:focus{
     border: 1px solid #5358eb;
     box-shadow: 0 0 0.4vw rgba(83, 88, 235, 0.3);
-}
-
-#sesion, #sesion1{
-    transition: transform 0.3s ease-in-out;
-}
-
-#im:hover, #im1:hover, #im2:hover, #im3:hover, #im4:hover, #im5:hover{
-    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
-}
-
-.card:hover{
-    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
 }
