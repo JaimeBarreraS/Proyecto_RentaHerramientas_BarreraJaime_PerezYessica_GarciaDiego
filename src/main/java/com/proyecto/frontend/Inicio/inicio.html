@@ -7,26 +7,73 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Indus Rental</h2>
-        <ul>
-        <li>Inicio</li>
-        <li>Usuarios</li>
-        <li>Facturación</li>
-        <li>Historial</li>
-        <li>Devoluciones</li>
-        <li>Reportes</li>
-        <li>Ajuste</li>
-        <li>Cerrar Sesión</li>
-        </ul>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+            <img src="Img/image 72.png" alt="Logo" />
+            <h2>Indus Rental<br><span>Tools Rental</span></h2>
+            </div>
+            <ul class="menu">
+            <li class="active"><a href="#">Inicio</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Facturación</a></li>
+            <li><a href="#">Historial</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Reportes</a></li>
+            <li><a href="#">Ajuste</a></li>
+            <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <div class="main">
+        <div class="topbar">
+            <div class="contopbar">
+            <div class="search">
+                <div class="group">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                        <g>
+                        <path
+                            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                        ></path>
+                        </g>
+                    </svg>
+                    <input class="input" type="search" placeholder="Search" />
+                    </div>
+            </div>
+            <div class="icons">
+                <span><img src="Img/image 85.png" alt=""></span>
+                <span><img src="Img/image 86.png" alt=""></span>
+                <span><img src="Img/image 84.png" alt=""></span>
+            </div>
+            <div class="user-info">
+                <img src="Img/image 79.png" alt="">
+                <div class="user-info-text">
+                    <h3>Jaime Barrera</h3>
+                    <p>Administrator</p>
+                </div>
+            </div>
+            </div>
+            <div class="welcom">
+                <div class="text-welcom">
+                    <h1>Tools Rental</h1>
+                    <p>Hola, Yesica. Bienvenido a Indus Rental</p>
+                </div>
+                <div class="search-bar">
+                    <div class="group">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                            <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                            ></path>
+                            </g>
+                        </svg>
+                        <input class="input" type="search" placeholder="Search" />
+                    </div>
+            </div>
+        </div>     
     </div>
-    <div class="main">
-        <header>
-        <input type="text" placeholder="buscador">
-        <div class="user">Jaime Barrera (Administrador)</div>
-        </header>
-        <section class="dashboard">
-        <h3>Tools Rental</h3>
+
+    
         <div class="stats">
             <div class="card">10,200<br><span>Clientes</span></div>
             <div class="card">250<br><span>Proveedores</span></div>
