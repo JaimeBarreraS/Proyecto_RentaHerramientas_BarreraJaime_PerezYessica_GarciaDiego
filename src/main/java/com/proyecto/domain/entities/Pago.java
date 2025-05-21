@@ -32,7 +32,7 @@ public class Pago {
     private Estado estado = Estado.PENDIENTE;
     
     @Column(name = "fecha_pago")
-    private LocalDateTime fechaPago = LocalDateTime.now();
+    private LocalDateTime fechaPago;
     
     @Column(name = "referencia_pago")
     private String referenciaPago;

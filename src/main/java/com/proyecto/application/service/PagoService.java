@@ -12,4 +12,7 @@ public interface PagoService {
     void delete(Long id);
     PagoDTO findByReservaId(Long reservaId);
     PagoDTO procesarPago(Long reservaId, PagoDTO pagoDTO);
+    public List<PagoDTO> findByDia(int dia);
+    public List<PagoDTO> findByMes(int mes);
+    public List<PagoDTO> findByAno(int ano);
 }

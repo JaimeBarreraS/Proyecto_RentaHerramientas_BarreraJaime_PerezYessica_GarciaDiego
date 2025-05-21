@@ -12,6 +12,7 @@ import com.proyecto.domain.entities.Pago;
 import com.proyecto.domain.entities.Reserva;
 import com.proyecto.infraestructure.repository.Reserva.ReservaRepository;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -118,4 +119,36 @@ public class PagoServiceImpl implements PagoService {
         
         return pago;
     }
+
+    @Override
+public List<PagoDTO> findByDia(int dia) {
+    LocalDate inicio = LocalDate.now().withDayOfMonth(dia); 
+    LocalDateTime inicioDia = inicio.atStartOfDay();
+    LocalDateTime finDia = inicio.atTime(23, 59, 59);
+
+    return pagoRepository.findByFechaPagoBetween(inicioDia, finDia)
+            .stream().map(this::convertToDTO).toList();
+}
+
+@Override
+public List<PagoDTO> findByMes(int mes) {
+    LocalDate inicio = LocalDate.of(LocalDate.now().getYear(), mes, 1); 
+    LocalDateTime inicioMes = inicio.atStartOfDay();
+    LocalDateTime finMes = inicio.plusMonths(1).minusDays(1).atTime(23, 59, 59);
+
+    return pagoRepository.findByFechaPagoBetween(inicioMes, finMes)
+            .stream().map(this::convertToDTO).toList();
+}
+
+@Override
+public List<PagoDTO> findByAno(int ano) {
+    LocalDate inicio = LocalDate.of(ano, 1, 1);  
+    LocalDateTime inicioAno = inicio.atStartOfDay();
+    LocalDateTime finAno = inicio.plusYears(1).minusDays(1).atTime(23, 59, 59);
+
+    return pagoRepository.findByFechaPagoBetween(inicioAno, finAno)
+            .stream().map(this::convertToDTO).toList();
+}
+
+
 }
