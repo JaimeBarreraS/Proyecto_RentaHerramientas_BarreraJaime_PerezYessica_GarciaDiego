@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import com.proyecto.domain.entities.Pago;
 
@@ -19,4 +20,5 @@ public class PagoDTO {
     private Pago.MetodoPago metodoPago;
     private Pago.Estado estado;
     private String referenciaPago;
+    private LocalDateTime fechaPago;
 }
