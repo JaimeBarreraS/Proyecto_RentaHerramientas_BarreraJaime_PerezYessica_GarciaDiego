@@ -26,9 +26,14 @@ body {
 
 .sidebar h2 {
     text-align: center;
-    margin-top: -7vw;
+    margin-top: -6vw;
     font-size: 2.2vw;
     margin-left: 4.5vw;
+}
+
+#logo{
+    margin-top: 2vw;
+    margin-left: 2vw;
 }
 
 #r{
@@ -102,7 +107,7 @@ body {
 
 #u{
     position: absolute;
-    margin-top: -5.5vw;
+    margin-top: -4.8vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -110,7 +115,7 @@ body {
 
 #i{
     position: absolute;
-    margin-top: -1vw;
+    margin-top: -0.9vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;

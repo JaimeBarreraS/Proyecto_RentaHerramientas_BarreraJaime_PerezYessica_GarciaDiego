@@ -15,8 +15,8 @@
             <h4>Tools Rental</h4>
             <ul>
                 <li><a href="../herramientas/usuario.html">Herramientas</a></li>
-                <li id="active"><a href="../factura/historial.html">Facturación</a></li>
-                <li><a href="../reservas/historial.html">Reservas</a></li>
+                <li><a href="../factura/historial.html">Facturación</a></li>
+                <li id="active"><a href="../reservas/historial.html">Reservas</a></li>
             </ul>
             <div class="settings">
                 <a href="../login/login.html" id="j">Cerrar Sesión</a>
@@ -45,7 +45,7 @@
 
     <header>
         <div class="content">
-            <h2>Historial Alquiler</h2>
+            <h2>RESERVAS</h2>
             <div class="record">
                 <span class="day red">Lunes</span>
                 <div class="details">
@@ -53,7 +53,14 @@
                 <p>Día: 12/12/2025</p>
                 <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
             </div>
-            <span class="eye"><img src="Img/image 66.png" alt=""></span>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
         </div>
 
         <div class="record">
@@ -63,7 +70,14 @@
             <p>Día: 12/12/2025</p>
             <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
             </div>
-            <span class="eye"><img src="Img/image 66.png" alt=""></span>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
         </div>
 
         <div class="record">
@@ -73,7 +87,14 @@
             <p>Día: 12/12/2025</p>
             <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
             </div>
-            <span class="eye"><img src="Img/image 66.png" alt=""></span>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
         </div>
 
         <div class="record">
@@ -83,9 +104,17 @@
                 <p>Día: 12/12/2025</p>
                 <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
             </div>
-            <span class="eye"><img src="Img/image 66.png" alt=""></span>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
         </div>
         <script src="script.js"></script>
     </header>
+    <button id="boton1">CONFIRMAR</button>
 </body>
 </html>
