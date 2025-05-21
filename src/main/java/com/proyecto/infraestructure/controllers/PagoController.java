@@ -56,4 +56,27 @@ public class PagoController {
         pagoService.delete(id);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/dia/{dia}")
+    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Obtener pagos por número de día")
+    public ResponseEntity<List<PagoDTO>> getPagosPorDia(@PathVariable int dia) {
+        return ResponseEntity.ok(pagoService.findByDia(dia));
+    }
+    
+    @GetMapping("/mes/{mes}")
+    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Obtener pagos por número de mes")
+    public ResponseEntity<List<PagoDTO>> getPagosPorMes(@PathVariable int mes) {
+        return ResponseEntity.ok(pagoService.findByMes(mes));
+    }
+    
+    @GetMapping("/ano/{ano}")
+    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Obtener pagos por número de año")
+    public ResponseEntity<List<PagoDTO>> getPagosPorAno(@PathVariable int ano) {
+        return ResponseEntity.ok(pagoService.findByAno(ano));
+    }
+    
+
 }

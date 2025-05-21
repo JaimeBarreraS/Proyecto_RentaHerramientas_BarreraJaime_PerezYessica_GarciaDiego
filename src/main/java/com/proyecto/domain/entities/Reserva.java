@@ -41,7 +41,7 @@ public class Reserva {
     private Estado estado = Estado.PENDIENTE;
     
     @Column(name = "fecha_reserva")
-    private LocalDateTime fechaReserva = LocalDateTime.now();
+    private LocalDateTime fechaReserva;
     
     private String observaciones;
     

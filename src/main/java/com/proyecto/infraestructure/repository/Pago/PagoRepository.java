@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.proyecto.domain.entities.Pago;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,4 +14,5 @@ import java.util.Optional;
 public interface PagoRepository extends JpaRepository<Pago, Long> {
     Optional<Pago> findByReservaId(Long reservaId);
     List<Pago> findByEstado(Pago.Estado estado);
+    List<Pago> findByFechaPagoBetween(LocalDateTime inicio, LocalDateTime fin);
 }

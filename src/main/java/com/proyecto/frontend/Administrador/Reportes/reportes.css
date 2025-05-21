@@ -3,6 +3,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6ff;
+}
+
 .container {
     display: flex;
 }
@@ -21,8 +27,9 @@ body {
 }
 
 #logo{
-    margin-top: 3vw;
-    margin-left: 2vw;
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0vw;
 }
 
 .sidebar.show {
@@ -41,11 +48,17 @@ body {
     font-size: 2.2vw;
     margin-left: 5vw;
 }
+#r2{
+    position: relative;
+    margin-top: -7vw;
+    font-size: 2.2vw;
+    margin-left: 4vw;
+}
 
 .sidebar li{
     width: 15vw;
     height: 2vw;
-    padding: 0.5vw 1vw;
+    padding: 0.2vw 1vw ;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
 }
@@ -95,14 +108,16 @@ body {
     position: absolute;
     color: white;
     text-decoration: none;
-    top: 45vw;
+    top: 40.1vw;
     font-size: 1.2vw;
+    margin-left: 1vw;
 }
 
 #imagenes{
-    margin-top: -25vw;
+    margin-top: -26.4vw;
     margin-bottom: 1vw;
     object-fit: contain;
+
 }
 
 #h{
@@ -115,7 +130,7 @@ body {
 
 #u{
     position: absolute;
-    margin-top: -12.5vw;
+    margin-top: -12.7vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -123,7 +138,7 @@ body {
 
 #i{
     position: absolute;
-    margin-top: -8.2vw;
+    margin-top: -8.4vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -131,7 +146,7 @@ body {
 
 #c{
     position: absolute;
-    margin-top: -4.6vw;
+    margin-top: -4.1vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -139,7 +154,7 @@ body {
 
 #re{
     position: absolute;
-    margin-top: -0.2vw;
+    margin-top: 0.25vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -147,7 +162,7 @@ body {
 
 #rep{
     position: absolute;
-    margin-top: 3.2vw;
+    margin-top: 4.3vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -178,7 +193,6 @@ body {
     border-radius: 1vw;
     background: #377dd8;
     width: 10vw;
-    height: 2vw;
 }
 
 h4{
@@ -204,13 +218,14 @@ h4{
     background: #295389;
     width: 100vw;
     height: 12vw;
+    z-index: 1;
 }
 
 #buscador{
     background-color: #eeeeee;
     width: 37vw;
     height: 2.5vw;
-    margin-left: 17vw;
+    margin-left: 11vw;
     margin-top: -1vw;
     border-radius: 2vw;
     text-decoration: none;
@@ -221,11 +236,11 @@ h4{
 
 #buscador1{
     background-color: #eeeeee;
-    width: 17vw;
+    width: 30vw;
     height: 2.5vw;
     position: absolute;
-    margin-left: 20vw;
-    margin-top: 8vw;
+    margin-left:11vw;
+    margin-top: 8.5vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -238,8 +253,8 @@ h4{
     width: 12vw;
     height: 2.5vw;
     border-radius: 2vw;
-    margin-left: 87vw;
-    margin-top: -3vw;
+    margin-left: 84.5vw;
+    margin-top: -2.5vw;
     position: absolute;
 }
 
@@ -248,17 +263,12 @@ h4{
     margin-top: -0.2vw;
 }
 
-#y{
-    font-size: 1vw;
-    margin-left: 4.5vw;
-    position: absolute;
-    margin-top: -2.7vw;
-}
 
 #ad{
     margin-left: 4.5vw;
     position: absolute;
-    margin-top: -1.5vw;
+    margin-top: -2.3vw;
+    font-weight: bold;
 }
 
 #ca{
@@ -279,29 +289,7 @@ h4{
     margin-left: 66vw;
 }
 
-#cu1{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-left: -39vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
-}
 
-#cu2{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-left: -55vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
-}
 
 #sesion1{
     background-color: #f5f6ff;
@@ -310,89 +298,6 @@ h4{
     margin-top: 12vw;
     padding: 2vw;
     box-sizing: border-box;
-}
-
-.card{
-    margin-left: 68vw;
-    width: 25vw;
-    height: 25vw;
-    margin-top: 5vw;
-    border: 0.1vw solid #3f43c9;
-}
-
-.card-img-top{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10vw;
-}
-
-.card-text{
-    font-size: 1.3vw;
-}
-
-#ima{
-    position: absolute;
-    margin-top: -10vw;
-}
-
-#foto{
-    margin-left: 2.5vw;
-    width: 7vw;
-}
-
-#im{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 5vw;
-    margin-top: -18vw;
-    border-radius: 1vw;
-}
-
-#im1{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 25vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im2{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 45vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im3{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 5vw;
-    margin-top: 3vw;
-    border-radius: 1vw;
-}
-
-#im4{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 25vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
-}
-
-#im5{
-    width: 12vw;
-    height: 14vw;
-    border: 0.1vw solid #3f43c9;
-    margin-left: 45vw;
-    margin-top: -14vw;
-    border-radius: 1vw;
 }
 
 #info{
@@ -453,6 +358,167 @@ input:focus{
     box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
 }
 
-.card:hover{
-    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
+
+
+.bienvenida {
+    margin-top: -3.7vw;
+    margin-left: 5.5vw;
 }
+
+.b1 {
+    color: #ffffff;  
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.b2 {
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+
+#lista-pagos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+    margin-left: 2vw;
+    background-color: #f5f6ff;
+}
+
+.pago-item {
+    width: 100%;
+    max-width: 45vw; 
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pago-item:hover {
+    transform: scale(1.05);
+}
+
+#filtros-pagos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filtros-pagos button {
+    background: #3f43c9;
+    color: white;
+    font-size: 1.2vw;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#filtros-pagos button:hover {
+    background: #5358eb;
+}
+
+#busqueda-pagos {
+    position: fixed;
+    top: 8vw;
+    display: flex;
+    left: 50vw;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #295389;
+    z-index: 2;
+}
+
+#busqueda-pagos input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#busqueda-pagos button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#busqueda-pagos button:hover {
+    background: #45a049;
+}
+
+#lista-facturas {
+    margin-top:-1vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-left: 2vw;
+}
+#fac{
+    margin-left: 2vw;
+    margin-top: -35vw;
+}
+.factura-item {
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btnFactura, .btnEliminar {
+    background: #007BFF;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btnEliminar {
+    background: #d9534f;
+}
+
+.btnFactura:hover {
+    background: #0056b3;
+}
+
+.btnEliminar:hover {
+    background: #c9302c;
+}
+
+.factura-container {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    justify-content: left;
+}
+
+.factura-imagen {
+    position: relative;
+    left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    margin-top: -10vw;
+}
+
+.btnFactura, .btnEliminar{
+    height: 2.5vw;
+}
+
+
+

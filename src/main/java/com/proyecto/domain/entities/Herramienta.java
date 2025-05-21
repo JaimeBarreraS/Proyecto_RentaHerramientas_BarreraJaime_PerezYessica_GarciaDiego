@@ -44,7 +44,7 @@ public class Herramienta {
     private Usuario proveedor;
     
     @Column(name = "fecha_registro")
-    private LocalDateTime fechaRegistro = LocalDateTime.now();
+    private LocalDateTime fechaRegistro;
     
     public enum Estado {
         DISPONIBLE, ALQUILADA, MANTENIMIENTO, NO_DISPONIBLE
