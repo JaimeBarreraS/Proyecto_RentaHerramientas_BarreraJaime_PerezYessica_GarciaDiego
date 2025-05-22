@@ -25,16 +25,16 @@ INSERT INTO usuarios (email, password, nombre, telefono, role, activo, fecha_reg
 
 -- Insertar herramientas
 INSERT INTO herramientas (nombre, descripcion, categoria, precio_dia, estado, imagen_url, proveedor_id, fecha_registro) VALUES 
-('Destornillador', 'Herramienta para tornillos', 'Manuales', 2.99, 'DISPONIBLE', 'img1.jpg', 6, '2023-01-05T10:00:00'),
-('Pala', 'Pala para cavar', 'Construccion', 4.50, 'DISPONIBLE', 'img2.jpg', 7, '2023-02-06T11:00:00'),
-('Cortadora', 'Corta concreto', 'Construccion', 20.00, 'DISPONIBLE', 'img3.jpg', 8, '2023-03-07T12:00:00'),
-('Lijadora', 'Para superficies lisas', 'Acabados', 8.75, 'DISPONIBLE', 'img4.jpg', 6, '2023-04-08T13:00:00'),
-('Pulidora', 'Para dar brillo', 'Acabados', 9.50, 'DISPONIBLE', 'img5.jpg', 7, '2023-05-09T14:00:00'),
-('Andamio', 'Andamio metalico', 'Estructuras', 15.00, 'DISPONIBLE', 'img6.jpg', 8, '2023-06-10T15:00:00'),
-('Cinta metrica', 'Medicion precisa', 'Medicion', 1.99, 'DISPONIBLE', 'img7.jpg', 6, '2023-07-11T16:00:00'),
-('Taladro Percutor', 'Taladro de impacto', 'Electricidad', 18.99, 'DISPONIBLE', 'img8.jpg', 7, '2023-08-12T17:00:00'),
-('Escalera', 'Escalera de aluminio', 'Acceso', 12.00, 'DISPONIBLE', 'img9.jpg', 8, '2023-09-13T18:00:00'),
-('Nivel', 'Nivel de burbuja', 'Medicion', 3.50, 'DISPONIBLE', 'img10.jpg', 6, '2023-10-14T19:00:00'),
+('Destornillador', 'Herramienta para tornillos', 'Manuales', 2.99, 'DISPONIBLE', 'destornillador.jpg', 6, '2023-01-05T10:00:00'),
+('Pala', 'Pala para cavar', 'Construccion', 4.50, 'DISPONIBLE', 'destornillador.jpg', 7, '2023-02-06T11:00:00'),
+('Cortadora', 'Corta concreto', 'Construccion', 20.00, 'DISPONIBLE', 'destornillador.jpg', 8, '2023-03-07T12:00:00'),
+('Lijadora', 'Para superficies lisas', 'Acabados', 8.75, 'DISPONIBLE', 'destornillador.jpg', 6, '2023-04-08T13:00:00'),
+('Pulidora', 'Para dar brillo', 'Acabados', 9.50, 'DISPONIBLE', 'destornillador.jpg', 7, '2023-05-09T14:00:00'),
+('Andamio', 'Andamio metalico', 'Estructuras', 15.00, 'DISPONIBLE', 'destornillador.jpg', 8, '2023-06-10T15:00:00'),
+('Cinta metrica', 'Medicion precisa', 'Medicion', 1.99, 'DISPONIBLE', 'destornillador.jpg', 6, '2023-07-11T16:00:00'),
+('Taladro Percutor', 'Taladro de impacto', 'Electricidad', 18.99, 'DISPONIBLE', 'destornillador.jpg', 7, '2023-08-12T17:00:00'),
+('Escalera', 'Escalera de aluminio', 'Acceso', 12.00, 'DISPONIBLE', 'destornillador.jpg', 8, '2023-09-13T18:00:00'),
+('Nivel', 'Nivel de burbuja', 'Medicion', 3.50, 'DISPONIBLE', 'destornillador.jpg', 6, '2023-10-14T19:00:00'),
 ('Rotomartillo', 'Perforacion fuerte', 'Electricidad', 22.00, 'DISPONIBLE', 'img11.jpg', 7, '2024-01-15T10:10:00'),
 ('Compresor', 'Aire a presion', 'Neumatica', 30.00, 'DISPONIBLE', 'img12.jpg', 8, '2024-02-16T11:20:00'),
 ('Soldador', 'Soldadura electrica', 'Soldadura', 25.00, 'DISPONIBLE', 'img13.jpg', 6, '2024-03-17T12:30:00'),
@@ -55,17 +55,17 @@ VALUES
 (5, 1, '2025-05-30 09:00:00', '2025-06-02 17:00:00', 18.75, 'CANCELADA', '2025-05-29 11:00:00', 'Cancelada por mal clima'),
 (6, 2, '2025-05-25 08:30:00', '2025-05-28 18:00:00', 60.00, 'CONFIRMADA', '2025-05-23 15:10:00', 'Alquiler para empresa constructora'),
 (7, 4, '2025-05-27 08:00:00', '2025-05-30 16:00:00', 74.99, 'PENDIENTE', '2025-05-26 09:00:00', 'Trabajo en carretera rural'),
-(8, 3, '2025-05-29 07:45:00', '2025-06-03 17:30:00', 50.00, 'CONFIRMADA', '2025-05-27 08:30:00', 'Obra de ampliacion'),
+(8, 3, '2025-05-29 07:45:00', '2025-06-03 17:30:00', 50.00, 'COMPLETADA', '2025-05-27 08:30:00', 'Obra de ampliacion'),
 (9, 5, '2025-06-01 08:00:00', '2025-06-07 18:00:00', 89.95, 'CANCELADA', '2025-05-29 14:20:00', 'Cliente no confirmo pago'),
 (10, 1, '2025-06-02 09:00:00', '2025-06-05 17:00:00', 40.00, 'CONFIRMADA', '2025-06-01 12:00:00', 'Tarea domestica'),
 (11, 2, '2025-05-23 08:00:00', '2025-05-27 18:00:00', 37.25, 'PENDIENTE', '2025-05-22 08:30:00', 'Reparacion estructural'),
-(12, 3, '2025-05-21 07:30:00', '2025-05-24 17:30:00', 22.80, 'CONFIRMADA', '2025-05-20 09:30:00', 'Mantenimiento de finca'),
+(12, 3, '2025-05-21 07:30:00', '2025-05-24 17:30:00', 22.80, 'EN_CURSO', '2025-05-20 09:30:00', 'Mantenimiento de finca'),
 (13, 4, '2025-06-05 08:00:00', '2025-06-10 18:00:00', 66.60, 'CONFIRMADA', '2025-06-03 11:45:00', 'Renovacion de local comercial'),
 (14, 5, '2025-05-28 08:15:00', '2025-05-30 16:45:00', 33.33, 'CANCELADA', '2025-05-26 10:30:00', 'Cliente cambio fechas'),
-(15, 2, '2025-06-03 09:00:00', '2025-06-06 17:00:00', 48.88, 'PENDIENTE', '2025-06-01 13:15:00', 'Trabajos de pintura'),
-(16, 3, '2025-06-07 08:00:00', '2025-06-10 17:30:00', 72.00, 'CONFIRMADA', '2025-06-06 08:00:00', 'Instalacion de vallas'),
+(15, 2, '2025-06-03 09:00:00', '2025-06-06 17:00:00', 48.88, 'EN_CURSO', '2025-06-01 13:15:00', 'Trabajos de pintura'),
+(16, 3, '2025-06-07 08:00:00', '2025-06-10 17:30:00', 72.00, 'COMPLETADA', '2025-06-06 08:00:00', 'Instalacion de vallas'),
 (17, 1, '2025-05-22 09:00:00', '2025-05-25 17:00:00', 26.50, 'CONFIRMADA', '2025-05-21 10:20:00', 'Obra publica'),
-(18, 4, '2025-05-24 08:30:00', '2025-05-26 17:30:00', 39.90, 'CONFIRMADA', '2025-05-23 09:00:00', 'Uso en taller temporal');
+(18, 4, '2025-05-24 08:30:00', '2025-05-26 17:30:00', 39.90, 'COMPLETADA', '2025-05-23 09:00:00', 'Uso en taller temporal');
 
 -- Insertar pagos
 INSERT INTO pagos (reserva_id, monto, metodo_pago, fecha_pago, estado, referencia_pago) VALUES

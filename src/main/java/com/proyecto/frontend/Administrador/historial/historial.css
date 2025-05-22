@@ -23,7 +23,7 @@ html {
     top: 0;
     height: 100vh;
     transition: left 0.3s ease-in-out;
-    z-index: 2;
+    z-index: 6;
 }
 
 #logo{
@@ -186,7 +186,7 @@ h4{
     background: #295389;
     width: 100vw;
     height: 12vw;
-    z-index: 1;
+    z-index: 5;
 }
 
 #buscador{
@@ -194,7 +194,7 @@ h4{
     width: 37vw;
     height: 2.5vw;
     margin-left: 11vw;
-    margin-top: -1vw;
+    margin-top: 2vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -257,6 +257,7 @@ h4{
     margin-top: -8vw;
     margin-left: 66vw;
 }
+
 
 
 #sesion1{
@@ -344,150 +345,73 @@ input:focus{
     font-size: 1.5vw;
 }
 
-#lista-pagos {
+#lista-reservas {
+    margin-top: -38vw;
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
-    gap: 20px; 
-    justify-content: center;
-    padding: 20px;
-    margin-left: 2vw;
-    background-color: #f5f6ff;
-}
-
-.pago-item {
-    width: 100%;
-    max-width: 45vw; 
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
-}
-
-.pago-item:hover {
-    transform: scale(1.05);
-}
-
-#filtros-pagos {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#filtros-pagos button {
-    background: #3f43c9;
-    color: white;
-    font-size: 1.2vw;
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#filtros-pagos button:hover {
-    background: #5358eb;
-}
-
-#busqueda-pagos {
-    position: fixed;
-    top: 8vw;
-    display: flex;
-    left: 50vw;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    background: #295389;
-    z-index: 2;
-}
-
-#busqueda-pagos input {
-    width: 120px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-#busqueda-pagos button {
-    background: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#busqueda-pagos button:hover {
-    background: #45a049;
-}
-
-#lista-facturas {
-    margin-top:-1vw;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
-    padding: 20px;
-    margin-left: 2vw;
+    padding: 5%;
 }
-#fac{
-    margin-left: 5vw;
-    margin-top: -35vw;
-}
-.factura-item {
-    width: 100%;
-    max-width: 300px;
-    background-color: #ffffff;
+
+.reserva-item {
+    background: white;
     padding: 15px;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
-.btnFactura, .btnEliminar, .btnDescargar {
-    background: #007BFF;
-    color: white;
-    padding: 8px;
-    border: none;
+.reserva-item:hover {
+    transform: scale(1.03);
+}
+
+.reserva-item p {
+    margin: 5px 0;
+    font-size: 1vw;
+}
+
+.herramienta-imagen:hover {
+    opacity: 0.8;
+}
+
+#estadoReserva {
+    padding: 10px;
+    font-size: 16px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.herramienta-imagen {
+    width: 11.5vw;
+    height: auto;
+    border-radius: 8px;
     margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+.herramienta{
+    position: absolute;
+    margin-left:30vw;
+    z-index: 2;
+    margin-top: -16vw;
 }
 
-.btnEliminar {
-    background: #d9534f;
+#filtro-reservas label {
+    font-size: 1.2vw;
+    color: #ffffff; 
 }
 
-.btnFactura:hover {
-    background: #0056b3;
+#filtro-reservas{
+    left: 78.5vw;
+    top: 8.5vw;
+    position: fixed;
+    z-index: 7;
 }
 
-.btnEliminar:hover {
-    background: #c9302c;
+strong{
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #b57a21;
 }
-
-.factura-container {
-    display: flex;
-    align-items: left;
-    gap: 10px;
-    justify-content: left;
-}
-
-.factura-imagen {
-    position: relative;
-    left: 10vw;
-    width: 10vw;
-    height: 10vw;
-    margin-top: -10vw;
-}
-
-.btnFactura, .btnEliminar{
-    height: 2.5vw;
-}
-
-
-
 
