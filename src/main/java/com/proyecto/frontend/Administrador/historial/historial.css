@@ -1,0 +1,582 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6ff;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20vw;
+    background: #295389;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#logo{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0vw;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-top: -6vw;
+    font-size: 2.2vw;
+    margin-left: 4.5vw;
+}
+
+#r{
+    margin-top: -1vw;
+    font-size: 2.2vw;
+    margin-left: 5vw;
+}
+#r2{
+    position: relative;
+    margin-top: -7vw;
+    font-size: 2.2vw;
+    margin-left: 4vw;
+}
+
+.sidebar li{
+    width: 15vw;
+    height: 2vw;
+    padding: 0.2vw 1vw ;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 6vw;
+    margin-left: 5vw;
+}
+
+#active{
+    background: #377dd8;
+    border-radius: 1vw;
+    width: 15vw;
+    height: 2.3vw;
+    padding-left: 4vw;
+    margin-left: -4vw;
+}
+
+.sidebar ul li {
+    margin: 35px 0;
+    width: 10vw;
+    background-color: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 1.2vw;
+}
+
+.sidebar li:hover{
+    background: #377dd8;
+    width: 10vw;
+}
+
+#j{
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    top: 40.1vw;
+    font-size: 1.2vw;
+    margin-left: 1vw;
+}
+
+#imagenes{
+    margin-top: -26.4vw;
+    margin-bottom: 1vw;
+    object-fit: contain;
+
+}
+
+#h{
+    position: absolute;
+    margin-top: -16vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#u{
+    position: absolute;
+    margin-top: -4vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#c{
+    position: absolute;
+    margin-top:0.3vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#rep{
+    position: absolute;
+    margin-top: 4.5vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#l{
+    position: absolute;
+    margin-top: 20.8vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+.settings{
+    margin-top: 20vw;
+    margin-left: 5vw;
+}
+
+.settings a:hover{
+    border-radius: 1vw;
+    background: #377dd8;
+    width: 10vw;
+}
+
+h4{
+    margin-left: 8.3vw;
+    font-size: 1vw;
+    margin-top: -0.5vw;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    cursor: pointer;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+
+#sesion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #295389;
+    width: 100vw;
+    height: 12vw;
+    z-index: 5;
+}
+
+#buscador{
+    background-color: #eeeeee;
+    width: 37vw;
+    height: 2.5vw;
+    margin-left: 11vw;
+    margin-top: 2vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 1vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#buscador1{
+    background-color: #eeeeee;
+    width: 30vw;
+    height: 2.5vw;
+    position: absolute;
+    margin-left:11vw;
+    margin-top: 8.5vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 1vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#cu{
+    background-color: #c592c2;
+    width: 12vw;
+    height: 2.5vw;
+    border-radius: 2vw;
+    margin-left: 84.5vw;
+    margin-top: -3vw;
+    position: absolute;
+}
+
+#user{
+    width: 3vw;
+    margin-top: -0.2vw;
+    margin-left: -0.3vw;
+}
+
+
+#ad{
+    margin-left:4.5vw;
+    position: absolute;
+    margin-top: -2.3vw;
+    font-weight: bold;
+}
+
+#ca{
+    width: 2.5vw;
+    margin-top: -1vw;
+    margin-left: 70vw;
+}
+
+#me{
+    width: 2.5vw;
+    margin-top: -5vw;
+    margin-left: 72vw;
+}
+
+#si{
+    width: 2.5vw;
+    margin-top: -8vw;
+    margin-left: 66vw;
+}
+
+
+
+#sesion1{
+    background-color: #f5f6ff;
+    width: 100vw;
+    height: 37vw;
+    margin-top: 12vw;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+#info{
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+input, button{
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    box-shadow:  0 0 0.4vw #5358eb80;
+    border:  1px solid #5358eb;
+}
+
+.sidebar ul li a:hover{
+    text-decoration: underline;
+    color: #b3b7ff;
+}
+
+#ca, #me, #si, #u, #i, #c, #re, #rep, #s, #l{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+#ca:hover, #me:hover, #si:hover, #u:hover, #i:hover, 
+#c:hover, #re:hover, #rep:hover, #s:hover, #l:hover{
+    transform: scale(1.2);
+}
+
+#buscador, #buscador1{
+    transition: box-shadow 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    box-shadow:  0 0 0.5vw rgba(83, 88, 235, 0.3);
+    border: 1px solid #5358eb;
+}
+
+#buscador, #buscador1{
+    background-color: #e4e6ff;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    border: 1px solid #5358eb;
+    box-shadow: 0 0 0.4vw rgba(83, 88, 235, 0.3);
+}
+
+#sesion, #sesion1{
+    transition: transform 0.3s ease-in-out;
+}
+
+#im:hover, #im1:hover, #im2:hover, #im3:hover, #im4:hover, #im5:hover{
+    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
+}
+
+
+
+.bienvenida {
+    margin-top: -2.2vw;
+    margin-left: 5.5vw;
+}
+
+.b1 {
+    color: #ffffff;  
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.b2 {
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+
+#lista-reservas {
+    margin-top: -38vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 5%;
+}
+
+.reserva-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.reserva-item:hover {
+    transform: scale(1.03);
+}
+
+.reserva-item p {
+    margin: 5px 0;
+    font-size: 1vw;
+}
+
+.herramienta-imagen:hover {
+    opacity: 0.8;
+}
+
+#estadoReserva {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.herramienta-imagen {
+    width: 11.5vw;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+.herramienta{
+    position: absolute;
+    margin-left:30vw;
+    z-index: 2;
+    margin-top: -16vw;
+}
+
+#filtro-reservas label {
+    font-size: 1.2vw;
+    color: #ffffff; 
+}
+
+#filtro-reservas{
+    left: 78.5vw;
+    top: 8.5vw;
+    position: fixed;
+    z-index: 7;
+}
+
+strong{
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #b57a21;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 45vw;
+        left: -45vw;
+        padding: 15px;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar li, #active {
+        width: 35vw;
+        font-size: 2vw;
+    }
+    
+    #buscador, #buscador1 {
+        width: 70vw;
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+    #cu {
+        width: 30vw;
+        margin-left: 65vw;
+        font-size: 2vw;
+    }
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding: 4vw;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 2vw;
+        position: static;
+    }
+    #filtro-reservas {
+        left: 2vw;
+        top: 16vw;
+        position: static;
+        margin-bottom: 2vw;
+    }
+}
+
+/* Móviles (<= 600px) */
+@media (max-width: 600px) {
+    html, body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .sidebar {
+        width: 90vw;
+        left: -90vw;
+        padding: 8px;
+        font-size: 4vw;
+        z-index: 10;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar h2, #r, #r2 {
+        font-size: 6vw;
+        margin-left: 2vw;
+        margin-top: 2vw;
+    }
+    .sidebar li, #active {
+        width: 80vw;
+        font-size: 4vw;
+        height: auto;
+        padding: 3vw 3vw;
+        margin: 2vw 0;
+    }
+    .sidebar ul {
+        margin-left: 2vw;
+        margin-top: 8vw;
+    }
+    #buscador, #buscador1 {
+        width: 90vw;
+        font-size: 4vw;
+        margin-left: 2vw;
+        margin-top: 4vw;
+        padding: 2vw 2vw;
+    }
+    #cu {
+        display: flex;
+        width: 40vw;
+        height: 10vw;
+        left: 8vw;
+        border-radius: 5vw;
+        margin-left: 50vw;
+        font-size: 4vw;
+    }
+
+    #ca, #me, #si{
+        position: absolute;
+        right: 50vw;
+        top: 5vw;
+    }
+
+    #ad{
+        top: 5vw;
+        left: 10vw;
+    }
+
+    #user{
+        width: 10vw;
+    }
+
+    #sesion {
+        height: 35vw;
+        min-height: 60px;
+    }
+    #sesion1 {
+        padding: 0vw;
+        margin-top: 0vw;
+        min-height: 0vw;
+    }
+
+    .bienvenida{
+        position: absolute;
+        top: 20vw;
+    }
+
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 0;
+        padding: 2vw;
+    }
+    .reserva-item p{
+        font-size: 4vw;
+        padding: 12px;
+    }
+    .herramienta-imagen {
+        width: 90vw;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 0;
+        position: static;
+        width: 100vw;
+    }
+    #filtro-reservas {
+        left: 0;
+        top: auto;
+        position: static;
+        margin-bottom: 4vw;
+        width: 100vw;
+        text-align: center;
+    }
+    h4, .b1, .b2, #info, #filtro-reservas label, strong {
+        font-size: 4vw !important;
+    }
+    /* Ajuste para botones y entradas */
+    input, button {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+}

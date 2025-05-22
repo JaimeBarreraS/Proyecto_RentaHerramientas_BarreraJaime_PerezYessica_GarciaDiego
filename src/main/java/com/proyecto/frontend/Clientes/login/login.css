@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background: #295389;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2vw;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 40vw;
+    height: 30vw;
+    text-align: center;
+}
+.login-box h2 {
+    margin-bottom: 5rem;
+}
+.input-group {
+    display: flex;
+    width: 30vw;
+    margin-bottom: 2rem;
+    margin-left: 5vw;
+}
+.input-group .icon { 
+    margin-right: 1rem;
+}
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+}
+.create-account {
+    display: block;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 1vw;
+}
+button {
+    background: #295389;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+    .login-box {
+        width: 80vw;
+        height: auto;
+        padding: 2rem 1rem;
+        border-radius: 4vw;
+    }
+    .input-group {
+        width: 70vw;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    .login-box {
+        width: 95vw;
+        min-width: 0;
+        height: auto;
+        padding: 1.5rem 0.5rem;
+        border-radius: 6vw;
+    }
+    .login-box h2 {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
+    .input-group {
+        width: 90vw;
+        flex-direction: column;
+        align-items: stretch;
+        margin-left: 0;
+        margin-bottom: 1.2rem;
+    }
+    .input-group .icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+    button {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    .create-account {
+        padding: 2vw 0;
+        font-size: 1rem;
+    }
+}
