@@ -362,3 +362,100 @@ input:hover {
     font-size: 24px;
     cursor: pointer;
 }
+
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        left: -250px;
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .main {
+        margin-left: 0 !important;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .topbar {
+        height: auto;
+        padding: 10px;
+    }
+    .user-info img {
+        width: 8vw;
+        height: 8vw;
+    }
+    .tool-card img {
+        width: 60px;
+        margin-right: 10px;
+    }
+}
+
+
+/* Para móviles (pantallas menores a 600px) */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 80vw;
+        padding: 10px 5px;
+        left: -312px;
+    }
+
+    .menu-btn {
+        width: 5VW;
+    }
+
+    .main-content, .content {
+        padding: 5px;
+    }
+    .topbar, .top-bar {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .icons{
+        position: absolute;
+        top: 16VW;
+        left: 60VW;
+    }
+
+    .search{
+        position: absolute;
+        left: 10vw;
+    }
+
+    .actions img, .tool-search img {
+        width: 20px;
+    }
+    .tool-search input, .top-bar .search input {
+        width: 50px;
+    }
+    .tool-card {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .tool-card img {
+        width: 40px;
+        margin-bottom: 10px;
+    }
+    .user-info {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3px;
+    }
+    .user-info img {
+        width: 12vw;
+        height: 12vw;
+    }
+    .welcom h1 {
+        font-size: 16px;
+    }
+}
