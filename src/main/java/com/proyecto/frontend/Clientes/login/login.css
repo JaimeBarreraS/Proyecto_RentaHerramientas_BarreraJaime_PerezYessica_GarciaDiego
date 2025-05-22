@@ -51,3 +51,55 @@ button {
     cursor: pointer;
     border-radius: 3px;
 }
+
+@media (max-width: 900px) {
+    .login-box {
+        width: 80vw;
+        height: auto;
+        padding: 2rem 1rem;
+        border-radius: 4vw;
+    }
+    .input-group {
+        width: 70vw;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    .login-box {
+        width: 95vw;
+        min-width: 0;
+        height: auto;
+        padding: 1.5rem 0.5rem;
+        border-radius: 6vw;
+    }
+    .login-box h2 {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
+    .input-group {
+        width: 90vw;
+        flex-direction: column;
+        align-items: stretch;
+        margin-left: 0;
+        margin-bottom: 1.2rem;
+    }
+    .input-group .icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+    button {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    .create-account {
+        padding: 2vw 0;
+        font-size: 1rem;
+    }
+}

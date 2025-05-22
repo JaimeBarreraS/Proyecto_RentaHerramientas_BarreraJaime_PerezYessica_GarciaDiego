@@ -30,10 +30,10 @@ document.querySelector(".login-box").addEventListener("submit", async (event) =>
             // Redirigir segun el rol
             switch (data.role) {
                 case "CLIENTE":
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Administrador/administrador/admin.html";
                     break;
                 case "PROVEEDOR":
-                    window.location.href = "dashboard.html";
+                    window.location.href = "../Administrador/administrador/admin.html";
                     break;
                 case "ADMIN":
                     window.location.href = "../Administrador/administrador/admin.html";
