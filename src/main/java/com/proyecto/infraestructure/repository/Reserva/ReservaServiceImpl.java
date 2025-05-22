@@ -5,6 +5,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.proyecto.application.service.ReservaService;
 import com.proyecto.domain.DTOs.ReservaDTO;
@@ -114,23 +115,6 @@ public class ReservaServiceImpl implements ReservaService {
         return convertToDTO(reservaRepository.save(reserva));
     }
 
-    private ReservaDTO convertToDTO(Reserva reserva) {
-        ReservaDTO dto = new ReservaDTO();
-        BeanUtils.copyProperties(reserva, dto);
-
-        if (reserva.getCliente() != null) {
-            dto.setClienteId(reserva.getCliente().getId());
-            dto.setClienteNombre(reserva.getCliente().getNombre());
-        }
-
-        if (reserva.getHerramienta() != null) {
-            dto.setHerramientaId(reserva.getHerramienta().getId());
-            dto.setHerramientaNombre(reserva.getHerramienta().getNombre());
-            dto.setHerramientaImagen(reserva.getHerramienta().getImagenUrl());
-        }
-
-        return dto;
-    }
 
     private Reserva convertToEntity(ReservaDTO dto) {
         Reserva reserva = new Reserva();
@@ -150,5 +134,29 @@ public class ReservaServiceImpl implements ReservaService {
         
         return reserva;
     }
+
+    private ReservaDTO convertToDTO(Reserva reserva) {
+    ReservaDTO dto = new ReservaDTO();
+    dto.setId(reserva.getId());
+    dto.setClienteId(reserva.getCliente().getId());
+    dto.setHerramientaId(reserva.getHerramienta().getId());
+    dto.setFechaInicio(reserva.getFechaInicio());
+    dto.setFechaFin(reserva.getFechaFin());
+    dto.setTotalPago(reserva.getTotalPago());
+    dto.setEstado(reserva.getEstado());
+    dto.setObservaciones(reserva.getObservaciones());
+    
+    dto.setClienteNombre(reserva.getCliente().getNombre()); 
+    dto.setHerramientaNombre(reserva.getHerramienta().getNombre()); 
+
+    String baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
+
+    if (reserva.getHerramienta().getImagenUrl() != null && !reserva.getHerramienta().getImagenUrl().isEmpty()) {
+        dto.setHerramientaImagen(baseUrl + "/uploads/" + reserva.getHerramienta().getImagenUrl());
+    }
+
+    return dto;
+}
+    
 
 }

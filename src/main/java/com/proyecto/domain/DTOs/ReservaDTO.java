@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.proyecto.domain.entities.Reserva;
 
@@ -33,9 +34,12 @@ public class ReservaDTO {
     private Reserva.Estado estado;
     
     private String observaciones;
+
+    private LocalDateTime fechaReserva;
     
     // Campos adicionales para vista
     private String clienteNombre;
     private String herramientaNombre;
     private String herramientaImagen;
+
 }

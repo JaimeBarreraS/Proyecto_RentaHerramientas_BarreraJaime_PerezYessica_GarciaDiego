@@ -4,11 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     menuBtn.addEventListener("click", function(event) {
         sidebar.classList.toggle("show");
-        event.stopPropagation(); // Evita que el clic se propague al documento
+        event.stopPropagation(); 
     });
 
     document.addEventListener("click", function(event) {
-        // Si el clic es fuera de la sidebar y el menú está abierto, se oculta
         if (!sidebar.contains(event.target) && sidebar.classList.contains("show")) {
             sidebar.classList.remove("show");
         }
@@ -26,10 +25,27 @@ function generarFactura(referencia, monto, fecha) {
         <p><strong>Monto:</strong> $${monto}</p>
         <p><strong>Fecha:</strong> ${fecha}</p>
         <button class="btnEliminar" onclick="eliminarFactura('${referencia}')">🗑️ Eliminar Factura</button>
+        <button class="btnDescargar" onclick="descargarFactura('${referencia}', '${monto}', '${fecha}')">📄 Descargar PDF</button>
     `;
 
     document.getElementById("lista-facturas").appendChild(facturaDiv);
 }
+
+function descargarFactura(referencia, monto, fecha) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFont("helvetica", "bold");
+    doc.text("Factura de Pago", 20, 20);
+
+    doc.setFont("helvetica", "normal");
+    doc.text(`Referencia: ${referencia}`, 20, 40);
+    doc.text(`Monto: $${monto}`, 20, 50);
+    doc.text(`Fecha: ${fecha}`, 20, 60);
+
+    doc.save(`Factura_${referencia}.pdf`);
+}
+
 
 function eliminarFactura(referencia) {
     const factura = document.querySelector(`.factura-item[data-id='${referencia}']`);
@@ -110,15 +126,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     
 });
-
-
-
-
-
-
-
-
-
-
-
 
