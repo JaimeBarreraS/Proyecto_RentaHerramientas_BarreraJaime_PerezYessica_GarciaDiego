@@ -415,3 +415,168 @@ strong{
     color: #b57a21;
 }
 
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 45vw;
+        left: -45vw;
+        padding: 15px;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar li, #active {
+        width: 35vw;
+        font-size: 2vw;
+    }
+    
+    #buscador, #buscador1 {
+        width: 70vw;
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+    #cu {
+        width: 30vw;
+        margin-left: 65vw;
+        font-size: 2vw;
+    }
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding: 4vw;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 2vw;
+        position: static;
+    }
+    #filtro-reservas {
+        left: 2vw;
+        top: 16vw;
+        position: static;
+        margin-bottom: 2vw;
+    }
+}
+
+/* Móviles (<= 600px) */
+@media (max-width: 600px) {
+    html, body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .sidebar {
+        width: 90vw;
+        left: -90vw;
+        padding: 8px;
+        font-size: 4vw;
+        z-index: 10;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar h2, #r, #r2 {
+        font-size: 6vw;
+        margin-left: 2vw;
+        margin-top: 2vw;
+    }
+    .sidebar li, #active {
+        width: 80vw;
+        font-size: 4vw;
+        height: auto;
+        padding: 3vw 3vw;
+        margin: 2vw 0;
+    }
+    .sidebar ul {
+        margin-left: 2vw;
+        margin-top: 8vw;
+    }
+    #buscador, #buscador1 {
+        width: 90vw;
+        font-size: 4vw;
+        margin-left: 2vw;
+        margin-top: 4vw;
+        padding: 2vw 2vw;
+    }
+    #cu {
+        display: flex;
+        width: 40vw;
+        height: 10vw;
+        left: 8vw;
+        border-radius: 5vw;
+        margin-left: 50vw;
+        font-size: 4vw;
+    }
+
+    #ca, #me, #si{
+        position: absolute;
+        right: 50vw;
+        top: 5vw;
+    }
+
+    #ad{
+        top: 5vw;
+        left: 10vw;
+    }
+
+    #user{
+        width: 10vw;
+    }
+
+    #sesion {
+        height: 35vw;
+        min-height: 60px;
+    }
+    #sesion1 {
+        padding: 0vw;
+        margin-top: 0vw;
+        min-height: 0vw;
+    }
+
+    .bienvenida{
+        position: absolute;
+        top: 20vw;
+    }
+
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 0;
+        padding: 2vw;
+    }
+    .reserva-item p{
+        font-size: 4vw;
+        padding: 12px;
+    }
+    .herramienta-imagen {
+        width: 90vw;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 0;
+        position: static;
+        width: 100vw;
+    }
+    #filtro-reservas {
+        left: 0;
+        top: auto;
+        position: static;
+        margin-bottom: 4vw;
+        width: 100vw;
+        text-align: center;
+    }
+    h4, .b1, .b2, #info, #filtro-reservas label, strong {
+        font-size: 4vw !important;
+    }
+    /* Ajuste para botones y entradas */
+    input, button {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+}
