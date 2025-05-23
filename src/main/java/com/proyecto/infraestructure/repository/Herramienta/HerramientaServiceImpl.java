@@ -2,6 +2,8 @@ package com.proyecto.infraestructure.repository.Herramienta;
 
 
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,11 +62,8 @@ public class HerramientaServiceImpl implements HerramientaService {
         return convertToDTO(herramientaRepository.save(herramienta));
     }
 
-    @Override
+    @Transactional
     public void delete(Long id) {
-        if (!herramientaRepository.existsById(id)) {
-            throw new EntityNotFoundException("Herramienta no encontrada con ID: " + id);
-        }
         herramientaRepository.deleteById(id);
     }
 

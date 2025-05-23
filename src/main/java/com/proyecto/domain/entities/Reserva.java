@@ -28,6 +28,9 @@ public class Reserva {
     @JoinColumn(name = "herramienta_id")
     private Herramienta herramienta;
     
+    @OneToOne(mappedBy = "reserva", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Pago pago;
+
     @Column(name = "fecha_inicio")
     private LocalDate fechaInicio;
     

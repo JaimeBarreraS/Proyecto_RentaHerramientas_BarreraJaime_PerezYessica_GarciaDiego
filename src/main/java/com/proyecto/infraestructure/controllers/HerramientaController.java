@@ -48,11 +48,13 @@ public class HerramientaController {
     @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Actualizar herramienta")
     public ResponseEntity<HerramientaDTO> updateHerramienta(@PathVariable Long id, @Valid @RequestBody HerramientaDTO herramientaDTO) {
+        System.out.println(">>> Entró al método PUT");
         return ResponseEntity.ok(herramientaService.update(id, herramientaDTO));
     }
 
+
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Eliminar herramienta")
     public ResponseEntity<?> deleteHerramienta(@PathVariable Long id) {
         herramientaService.delete(id);

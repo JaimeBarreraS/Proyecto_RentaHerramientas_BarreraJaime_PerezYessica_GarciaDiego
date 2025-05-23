@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "usuarios")
@@ -33,6 +34,12 @@ public class Usuario {
     
     @Enumerated(EnumType.STRING)
     private Role role = Role.CLIENTE;
+
+    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL)
+    private List<Herramienta> herramientasProveedor;
+    
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Reserva> reservasCliente;
     
     @Column(name = "fecha_registro")
     private LocalDateTime fechaRegistro = LocalDateTime.now();
