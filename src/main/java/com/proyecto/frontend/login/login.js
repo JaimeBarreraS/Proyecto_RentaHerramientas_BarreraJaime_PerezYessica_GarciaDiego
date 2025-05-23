@@ -33,7 +33,7 @@ document.querySelector(".login-box").addEventListener("submit", async (event) =>
                     window.location.href = "../Administrador/administrador/admin.html";
                     break;
                 case "PROVEEDOR":
-                    window.location.href = "../Administrador/administrador/admin.html";
+                    window.location.href = "../Proveedor/Inventario/inventario.html";
                     break;
                 case "ADMIN":
                     window.location.href = "../Administrador/administrador/admin.html";
