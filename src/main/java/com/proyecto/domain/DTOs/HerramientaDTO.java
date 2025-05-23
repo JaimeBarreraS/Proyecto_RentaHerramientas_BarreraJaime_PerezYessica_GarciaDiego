@@ -17,12 +17,10 @@ import com.proyecto.domain.entities.Herramienta;
 public class HerramientaDTO {
     private Long id;
     
-    @NotBlank
     private String nombre;
     
     private String descripcion;
     
-    @NotBlank
     private String categoria;
     
     @Positive

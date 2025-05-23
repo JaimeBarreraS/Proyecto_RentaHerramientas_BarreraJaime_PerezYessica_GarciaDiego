@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "herramientas")
@@ -42,6 +43,9 @@ public class Herramienta {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "proveedor_id")
     private Usuario proveedor;
+
+    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Reserva> reservas;
     
     @Column(name = "fecha_registro")
     private LocalDateTime fechaRegistro;
