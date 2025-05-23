@@ -15,7 +15,7 @@ html {
 
 .sidebar {
     width: 20vw;
-    background: #295389;
+    background: #0d484e;
     color: white;
     padding: 20px;
     position: fixed;
@@ -28,8 +28,8 @@ html {
 
 #logo{
     position: relative;
-    margin-top: 1vw;
-    margin-left: 0vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
 }
 
 .sidebar.show {
@@ -48,9 +48,10 @@ html {
     font-size: 2.2vw;
     margin-left: 5vw;
 }
+
 #r2{
     position: relative;
-    margin-top: -7vw;
+    margin-top: -6vw;
     font-size: 2.2vw;
     margin-left: 4vw;
 }
@@ -58,7 +59,7 @@ html {
 .sidebar li{
     width: 15vw;
     height: 2vw;
-    padding: 0.2vw 1vw ;
+    padding: 2vw 1vw ;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
 }
@@ -112,25 +113,17 @@ html {
 
 }
 
-#h{
-    position: absolute;
-    margin-top: -16vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
 #u{
     position: absolute;
-    margin-top: -4vw;
-    margin-left: 1.5vw;
+    margin-top: -7.5vw;
+    margin-left: 1.8vw;
     width: 1.8vw;
     height: 1.8vw;
 }
 
 #c{
     position: absolute;
-    margin-top:0.3vw;
+    margin-top: -1.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -138,7 +131,7 @@ html {
 
 #rep{
     position: absolute;
-    margin-top: 4.5vw;
+    margin-top: 4.2vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -146,7 +139,7 @@ html {
 
 #l{
     position: absolute;
-    margin-top: 20.8vw;
+    margin-top: 13.8vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -183,7 +176,7 @@ h4{
     position: fixed;
     top: 0;
     left: 0;
-    background: #295389;
+    background: #045b62;
     width: 100vw;
     height: 12vw;
     z-index: 1;
@@ -217,13 +210,21 @@ h4{
 }
 
 #cu{
-    background-color: #c592c2;
-    width: 12vw;
+    background-color: #CEAE80;
+    width: 10vw;
     height: 2.5vw;
     border-radius: 2vw;
     margin-left: 84.5vw;
     margin-top: -3vw;
     position: absolute;
+}
+
+#color{
+    background: #c7cebe;
+    width: 100%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
 }
 
 #user{
@@ -325,8 +326,6 @@ input:focus{
     box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
 }
 
-
-
 .bienvenida {
     margin-top: -2.2vw;
     margin-left: 5.5vw;
@@ -397,7 +396,7 @@ input:focus{
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
-    background: #295389;
+    background: #045b62;
     z-index: 2;
 }
 
@@ -410,7 +409,8 @@ input:focus{
 }
 
 #busqueda-pagos button {
-    background: #4CAF50;
+    
+    background: #0d484e;
     color: white;
     padding: 10px;
     border: none;
@@ -420,7 +420,7 @@ input:focus{
 }
 
 #busqueda-pagos button:hover {
-    background: #45a049;
+    background-color: #CEAE80;
 }
 
 #lista-facturas {
@@ -495,7 +495,7 @@ html, body{
 
 .sidebar {
     width: 20vw;
-    background: #295389;
+    background: #0d484e;
     color: white;
     padding: 20px;
     position: fixed;
@@ -640,7 +640,7 @@ h4{
     position: fixed;
     top: 0;
     left: 0;
-    background: #295389;
+    background: #045b62;
     width: 100vw;
     height: 30vw;
     z-index: 1;
@@ -661,7 +661,7 @@ h4{
 }
 
 #cu{
-    background-color: #c592c2;
+    background-color: #CEAE80;
     width: 20vw;
     height: 6vw;
     border-radius: 2vw;
@@ -832,28 +832,25 @@ input:focus{
 }
 
 #lista-pagos {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+    display: block;
     gap: 20px; 
     justify-content: center;
-    padding: 20px;
-    margin-left: 2vw;
+    padding: 2vw;
+    margin-left: 5vw;
     background-color: #f5f6ff;
 }
 
 .pago-item {
     width: 100%;
-    max-width: 45vw; 
+    max-width: 85vw; 
+    height: 80vw;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 10px;
     text-align: left;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
-}
-
-.pago-item:hover {
-    transform: scale(1.05);
+    margin-bottom: 20px;
 }
 
 #filtros-pagos {
@@ -949,11 +946,12 @@ input:focus{
 }
 
 .factura-item {
-    width: 100%;
-    max-width: 300px;
+    width: 85vw;
+    max-width: 350px;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 10px;
+    margin-left: 5vw;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
@@ -973,6 +971,10 @@ input:focus{
     background: #d9534f;
 }
 
+.btnEliminar{
+    height: 10vw !important;
+}
+
 .btnFactura:hover {
     background: #0056b3;
 }
@@ -985,24 +987,26 @@ input:focus{
     display: flex;
     align-items: left;
     gap: 1px;
+    height: 2vw;
     justify-content: left;
     flex-direction: column;
 }
 
 .factura-imagen {
-    position: relative;
-    left: 10vw;
-    width: 10vw;
-    height: 10vw;
-    margin-top: -10vw;
+    position: absolute;
+    left: 72vw;
+    width: 12vw;
+    height: 12vw;
+    margin-top: -47vw;
 }
 
 .btnFactura, .btnEliminar{
-    height: 2.5vw;
+    height: 45vw;
+    width: 45vw;
+    margin-left: 15vw;
 }
 
 .pago-item{
-    background-color: #0056b3;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 }
