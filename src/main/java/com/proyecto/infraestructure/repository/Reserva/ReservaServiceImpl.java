@@ -148,13 +148,8 @@ public class ReservaServiceImpl implements ReservaService {
     
     dto.setClienteNombre(reserva.getCliente().getNombre()); 
     dto.setHerramientaNombre(reserva.getHerramienta().getNombre()); 
-
-    String baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
-
-    if (reserva.getHerramienta().getImagenUrl() != null && !reserva.getHerramienta().getImagenUrl().isEmpty()) {
-        dto.setHerramientaImagen(baseUrl + "/uploads/" + reserva.getHerramienta().getImagenUrl());
-    }
-
+    dto.setHerramientaImagen(reserva.getHerramienta().getImagenUrl()); 
+    
     return dto;
 }
     

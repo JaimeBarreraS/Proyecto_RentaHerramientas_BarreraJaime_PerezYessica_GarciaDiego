@@ -28,46 +28,46 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private JwtUtil jwtUtil;
 
     @Override
-protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
-                                FilterChain chain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+                                    FilterChain chain) throws ServletException, IOException {
 
-    System.out.println("Método: " + request.getMethod() + " - URI: " + request.getRequestURI());
+        System.out.println("Método: " + request.getMethod() + " - URI: " + request.getRequestURI());
 
-    final String requestTokenHeader = request.getHeader("Authorization");
+        final String requestTokenHeader = request.getHeader("Authorization");
 
-    String username = null;
-    String jwtToken = null;
+        String username = null;
+        String jwtToken = null;
 
-    if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
-        jwtToken = requestTokenHeader.substring(7);
-        try {
-            username = jwtUtil.getUsernameFromToken(jwtToken);
-        } catch (IllegalArgumentException e) {
-            System.out.println("No se pudo obtener el JWT Token");
-        } catch (ExpiredJwtException e) {
-            System.out.println("El token JWT ha expirado");
+        if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
+            jwtToken = requestTokenHeader.substring(7);
+            try {
+                username = jwtUtil.getUsernameFromToken(jwtToken);
+            } catch (IllegalArgumentException e) {
+                System.out.println("No se pudo obtener el JWT Token");
+            } catch (ExpiredJwtException e) {
+                System.out.println("El token JWT ha expirado");
+            }
         }
-    }
 
-    if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-        UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
+        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
 
-        if (jwtUtil.validateToken(jwtToken, userDetails)) {
-            UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
-                    new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-            usernamePasswordAuthenticationToken
-                    .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            if (jwtUtil.validateToken(jwtToken, userDetails)) {
+                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
+                        new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                usernamePasswordAuthenticationToken
+                        .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
 
-            System.out.println("Token válido para el usuario: " + username);
+                System.out.println("Token válido para el usuario: " + username);
+            } else {
+                System.out.println("Token inválido para el usuario: " + username);
+            }
         } else {
-            System.out.println("Token inválido para el usuario: " + username);
+            System.out.println("No se autenticó ningún usuario para esta solicitud");
         }
-    } else {
-        System.out.println("No se autenticó ningún usuario para esta solicitud");
-    }
 
-    chain.doFilter(request, response);
-}
+        chain.doFilter(request, response);
+    }
 
 }

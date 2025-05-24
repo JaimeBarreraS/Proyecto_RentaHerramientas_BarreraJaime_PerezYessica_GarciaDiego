@@ -31,6 +31,7 @@ public class PagoController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Obtener pago por ID")
     public ResponseEntity<PagoDTO> getPagoById(@PathVariable Long id) {
         return ResponseEntity.ok(pagoService.findById(id));
@@ -58,21 +59,21 @@ public class PagoController {
     }
 
     @GetMapping("/dia/{dia}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Obtener pagos por número de día")
     public ResponseEntity<List<PagoDTO>> getPagosPorDia(@PathVariable int dia) {
         return ResponseEntity.ok(pagoService.findByDia(dia));
     }
     
     @GetMapping("/mes/{mes}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Obtener pagos por número de mes")
     public ResponseEntity<List<PagoDTO>> getPagosPorMes(@PathVariable int mes) {
         return ResponseEntity.ok(pagoService.findByMes(mes));
     }
     
     @GetMapping("/ano/{ano}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Obtener pagos por número de año")
     public ResponseEntity<List<PagoDTO>> getPagosPorAno(@PathVariable int ano) {
         return ResponseEntity.ok(pagoService.findByAno(ano));

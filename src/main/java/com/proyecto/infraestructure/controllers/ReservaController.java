@@ -50,7 +50,7 @@ public class ReservaController {
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Eliminar reserva")
     public ResponseEntity<?> deleteReserva(@PathVariable Long id) {
         reservaService.delete(id);

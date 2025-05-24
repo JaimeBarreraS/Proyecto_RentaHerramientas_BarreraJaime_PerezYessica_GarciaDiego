@@ -53,6 +53,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/proveedor/**").hasAnyRole("ADMIN", "PROVEEDOR")
                         .requestMatchers("/api/cliente/**").hasAnyRole("ADMIN", "CLIENTE")
                         .requestMatchers("/api/herramientas/**").hasAnyRole("ADMIN", "PROVEEDOR")
+                        .requestMatchers("/api/reservas/**").hasAnyRole("ADMIN", "CLIENTE", "PROVEEDOR")
                         .anyRequest().authenticated())
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
