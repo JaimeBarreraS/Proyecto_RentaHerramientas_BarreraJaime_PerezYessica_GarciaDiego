@@ -15,7 +15,7 @@ html {
 
 .sidebar {
     width: 20vw;
-    background: #295389;
+    background: #0d484e;
     color: white;
     padding: 20px;
     position: fixed;
@@ -28,8 +28,8 @@ html {
 
 #logo{
     position: relative;
-    margin-top: 1vw;
-    margin-left: 0vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
 }
 
 .sidebar.show {
@@ -48,9 +48,10 @@ html {
     font-size: 2.2vw;
     margin-left: 5vw;
 }
+
 #r2{
     position: relative;
-    margin-top: -7vw;
+    margin-top: -6vw;
     font-size: 2.2vw;
     margin-left: 4vw;
 }
@@ -58,7 +59,7 @@ html {
 .sidebar li{
     width: 15vw;
     height: 2vw;
-    padding: 0.2vw 1vw ;
+    padding: 2vw 1vw ;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
 }
@@ -95,6 +96,7 @@ html {
     background: #377dd8;
     width: 10vw;
 }
+
 #j{
     position: absolute;
     color: white;
@@ -111,25 +113,17 @@ html {
 
 }
 
-#h{
-    position: absolute;
-    margin-top: -16vw;
-    margin-left: 1.5vw;
-    width: 1.8vw;
-    height: 1.8vw;
-}
-
 #u{
     position: absolute;
-    margin-top: -4vw;
-    margin-left: 1.5vw;
+    margin-top: -7.5vw;
+    margin-left: 1.8vw;
     width: 1.8vw;
     height: 1.8vw;
 }
 
 #c{
     position: absolute;
-    margin-top:0.3vw;
+    margin-top: -1.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -137,7 +131,7 @@ html {
 
 #rep{
     position: absolute;
-    margin-top: 4.5vw;
+    margin-top: 4.2vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -145,7 +139,7 @@ html {
 
 #l{
     position: absolute;
-    margin-top: 20.8vw;
+    margin-top: 13.8vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -182,27 +176,14 @@ h4{
     position: fixed;
     top: 0;
     left: 0;
-    background: #295389;
+    background: #045b62;
     width: 100vw;
     height: 12vw;
     z-index: 1;
 }
 
-#buscador{
-    background-color: #eeeeee;
-    width: 37vw;
-    height: 2.5vw;
-    margin-left: 11vw;
-    margin-top: -1vw;
-    border-radius: 2vw;
-    text-decoration: none;
-    font-size: 1vw;
-    padding-left: 1vw;
-    border: none;
-}
-
 #buscador1{
-    background-color: #eeeeee;
+    background-color: #0d484e;
     width: 30vw;
     height: 2.5vw;
     position: absolute;
@@ -216,8 +197,8 @@ h4{
 }
 
 #cu{
-    background-color: #c592c2;
-    width: 12vw;
+    background-color: #CEAE80;
+    width: 10vw;
     height: 2.5vw;
     border-radius: 2vw;
     margin-left: 84.5vw;
@@ -247,20 +228,20 @@ h4{
 
 #me{
     width: 2.5vw;
-    margin-top: -5vw;
+    margin-top: -4.8vw;
     margin-left: 72vw;
 }
 
 #si{
     width: 2.5vw;
-    margin-top: -8vw;
+    margin-top: -7.5vw;
     margin-left: 66vw;
 }
 
 #cu1{
     width: 10vw;
     height: 2.8vw;
-    background-color: #eeeeee;
+    background: #0d484e;
     border-radius: 2vw;
     position: absolute;
     margin-left: -15vw;
@@ -273,7 +254,7 @@ h4{
 #cu2{
     width: 10vw;
     height: 2.8vw;
-    background-color: #eeeeee;
+    background: #0d484e;
     border-radius: 2vw;
     position: absolute;
     margin-top: 1.6vw;
@@ -509,7 +490,7 @@ html, body{
 
 .sidebar {
     width: 20vw;
-    background: #295389;
+    background: #0d484e;
     color: white;
     padding: 20px;
     position: fixed;
@@ -654,7 +635,7 @@ h4{
     position: fixed;
     top: 0;
     left: 0;
-    background: #295389;
+    background: #045b62;
     width: 100vw;
     height: 30vw;
     z-index: 1;
@@ -675,7 +656,7 @@ h4{
 }
 
 #cu{
-    background-color: #c592c2;
+    background-color: #CEAE80;
     width: 20vw;
     height: 6vw;
     border-radius: 2vw;
@@ -719,7 +700,7 @@ h4{
 #cu1{
     width: 19vw;
     height: 3.5vw;
-    background-color: #eeeeee;
+    background: #0d484e;
     border-radius: 2vw;
     margin-top: -2vw;
     margin-left: 75vw;
@@ -735,7 +716,7 @@ h4{
 #cu2{
     width: 16vw;
     height: 3.5vw;
-    background-color: #eeeeee;
+    background: #0d484e;
     border-radius: 2vw;
     margin-top: -2vw;
     margin-left: 55vw;

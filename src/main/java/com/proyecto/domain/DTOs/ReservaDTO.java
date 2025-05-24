@@ -37,7 +37,6 @@ public class ReservaDTO {
 
     private LocalDateTime fechaReserva;
     
-    // Campos adicionales para vista
     private String clienteNombre;
     private String herramientaNombre;
     private String herramientaImagen;

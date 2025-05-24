@@ -23,7 +23,7 @@ html {
     top: 0;
     height: 100vh;
     transition: left 0.3s ease-in-out;
-    z-index: 2;
+    z-index: 6;
 }
 
 #logo{
@@ -95,6 +95,7 @@ html {
     background: #377dd8;
     width: 10vw;
 }
+
 #j{
     position: absolute;
     color: white;
@@ -185,7 +186,7 @@ h4{
     background: #630101;
     width: 100vw;
     height: 12vw;
-    z-index: 1;
+    z-index: 5;
 }
 
 #buscador{
@@ -193,7 +194,7 @@ h4{
     width: 37vw;
     height: 2.5vw;
     margin-left: 11vw;
-    margin-top: -1vw;
+    margin-top: 2vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -206,7 +207,7 @@ h4{
     width: 30vw;
     height: 2.5vw;
     position: absolute;
-    margin-left: 58.5vw;
+    margin-left:11vw;
     margin-top: 8.5vw;
     border-radius: 2vw;
     text-decoration: none;
@@ -257,38 +258,7 @@ h4{
     margin-left: 66vw;
 }
 
-#cu1{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-left: -15vw;
-    margin-top: 1.6vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
-}
 
-#cu2{
-    width: 10vw;
-    height: 2.8vw;
-    background-color: #eeeeee;
-    border-radius: 2vw;
-    position: absolute;
-    margin-top: 1.6vw;
-    margin-left: -27vw;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-    border: none;
-}
-
-#cu1:hover{
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.664);
-}
-#cu2:hover{
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.664);
-}
 
 #sesion1{
     background-color: #f5f6ff;
@@ -298,39 +268,6 @@ h4{
     padding: 2vw;
     box-sizing: border-box;
 }
-
-.card{
-    position: fixed;
-    top: 9vw;
-    left: 64vw;
-    width: 30vw;
-    height: 31vw;
-    margin-top: 5vw;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card-img-top{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10vw;
-    margin-left: 9vw;
-}
-
-.card-text{
-    font-size: 1.3vw;
-    position: fixed;
-}
-
-
-
-#foto{
-    margin-left: 2.5vw;
-    width: 7vw;
-}
-
-
 
 #info{
     font-size: 1.1vw;
@@ -390,117 +327,7 @@ input:focus{
     box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
 }
 
-.card:hover{
-    transform: scale(1.05);
-}
 
-#ima {
-    position: absolute;
-    top: 14vw;
-    width: 60vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 20px; 
-    justify-content: center;
-    padding: 20px;
-}
-
-.user-box {
-    width: 250px; 
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
-}
-
-.user-box:hover {
-    transform: scale(1.05);
-}
-
-.user-box img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.nombre {
-    color: #3f43c9;  
-    font-weight: bold;
-}
-
-.role {
-    color: #ff9800;  
-    font-weight: bold;
-}
-
-.email {
-    color: #4caf50;  
-    font-weight: bold;
-}
-
-.telefono {
-    color: #e91e63;  
-    font-weight: bold;
-}
-
-strong{
-    position: absolute;
-    color: #000000;
-    margin-left: 1.5vw;
-}
-
-.xr{
-    margin-top: 1.2vw;
-}
-
-input{
-    margin-left: 12vw;
-    height: 2vw;
-    background-color: #ebebeb;
-    font-size: 1.2vw;
-    border: #000000;
-}
-select{
-    margin-left: 9vw;
-    height: 2vw;
-    background-color: #ebebeb;
-    font-size: 1.2vw;
-}
-
-#clear-btn{
-    position: absolute;
-    background-color: #f5ffb5;
-    border-radius: 0.5vw;
-    top: 26.5vw;
-    left: 10vw;
-}
-
-#create-btn{
-    position: absolute;
-    background-color: #b5ffc3;
-    border-radius: 0.5vw;
-    top: 26.5vw;
-    left: 5vw;
-}
-
-#update-btn{
-    position: absolute;
-    background-color: #b5e0ff;
-    border-radius: 0.5vw;
-    top: 26.5vw;
-    left: 15vw;
-}
-
-#delete-btn{
-    position: absolute;
-    background-color: #ffb5b5;
-    border-radius: 0.5vw;
-    top: 26.5vw;
-    left: 20vw;
-}
 
 .bienvenida {
     margin-top: -2.2vw;
@@ -518,40 +345,235 @@ select{
     font-size: 1.5vw;
 }
 
-.foto{
-    width: 10vw; 
-    height: 10vw;
-    height: auto; 
+#lista-reservas {
+    margin-top: -38vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 5%;
 }
 
-.foto2{
-    position: relative;
-    left: 8vw;
-    width: 10vw;
-    height: auto; 
-}
-
-.info{
-    text-align: center;
-}
-
-.info {
+.reserva-box {
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease;
 }
 
-.info:hover {
+.reserva-box:hover {
     transform: scale(1.03);
 }
 
-.info p {
+.reserva-box p {
     margin: 5px 0;
     font-size: 1vw;
     margin-left: 15vw;
 }
 
+.herramienta-img {
+    position: absolute;
+    width: 12vw;
+    height: 11vw;
+}
 
+.estado-select{
+    position: relative;
+    width: 8vw;
+    height: 2vw;
+    font-size: 1vw;
+    border-radius: 0vw;
+    display: inline-block;
+    border-radius: 0.2vw;
+    background-color: #c0c0c0;
+    border: none;
+    margin-left: 15vw;
+}
+
+.confirmar-btn{
+    position: relative;
+    background-color: #b30d31;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    left: 10vw;
+    width: 8vw; 
+    height: 2vw;
+    cursor: pointer;
+    border-radius: 0.2vw;
+}
+strong{
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #a99627;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 45vw;
+        left: -45vw;
+        padding: 15px;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar li, #active {
+        width: 35vw;
+        font-size: 2vw;
+    }
+    
+    #buscador, #buscador1 {
+        width: 70vw;
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+    #cu {
+        width: 30vw;
+        margin-left: 65vw;
+        font-size: 2vw;
+    }
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding: 4vw;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 2vw;
+        position: static;
+    }
+    #filtro-reservas {
+        left: 2vw;
+        top: 16vw;
+        position: static;
+        margin-bottom: 2vw;
+    }
+}
+
+/* Móviles (<= 600px) */
+@media (max-width: 600px) {
+    html, body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .sidebar {
+        width: 90vw;
+        left: -90vw;
+        padding: 8px;
+        font-size: 4vw;
+        z-index: 10;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar h2, #r, #r2 {
+        font-size: 6vw;
+        margin-left: 2vw;
+        margin-top: 2vw;
+    }
+    .sidebar li, #active {
+        width: 80vw;
+        font-size: 4vw;
+        height: auto;
+        padding: 3vw 3vw;
+        margin: 2vw 0;
+    }
+    .sidebar ul {
+        margin-left: 2vw;
+        margin-top: 8vw;
+    }
+    #buscador, #buscador1 {
+        width: 90vw;
+        font-size: 4vw;
+        margin-left: 2vw;
+        margin-top: 4vw;
+        padding: 2vw 2vw;
+    }
+    #cu {
+        display: flex;
+        width: 40vw;
+        height: 10vw;
+        left: 8vw;
+        border-radius: 5vw;
+        margin-left: 50vw;
+        font-size: 4vw;
+    }
+
+    #ca, #me, #si{
+        position: absolute;
+        right: 50vw;
+        top: 5vw;
+    }
+
+    #ad{
+        top: 5vw;
+        left: 10vw;
+    }
+
+    #user{
+        width: 10vw;
+    }
+
+    #sesion {
+        height: 35vw;
+        min-height: 60px;
+    }
+    #sesion1 {
+        padding: 0vw;
+        margin-top: 0vw;
+        min-height: 0vw;
+    }
+
+    .bienvenida{
+        position: absolute;
+        top: 20vw;
+    }
+
+    #lista-reservas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 0;
+        padding: 2vw;
+    }
+    .reserva-item p{
+        font-size: 4vw;
+        padding: 12px;
+    }
+    .herramienta-imagen {
+        width: 90vw;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .herramienta {
+        margin-left: 0;
+        margin-top: 0;
+        position: static;
+        width: 100vw;
+    }
+    #filtro-reservas {
+        left: 0;
+        top: auto;
+        position: static;
+        margin-bottom: 4vw;
+        width: 100vw;
+        text-align: center;
+    }
+    h4, .b1, .b2, #info, #filtro-reservas label, strong {
+        font-size: 4vw !important;
+    }
+    /* Ajuste para botones y entradas */
+    input, button {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+}

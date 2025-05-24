@@ -25,7 +25,7 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @GetMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR')")
     @Operation(summary = "Obtener todos los usuarios")
     public ResponseEntity<List<UsuarioDTO>> getAllUsuarios() {
         return ResponseEntity.ok(usuarioService.findAll());
