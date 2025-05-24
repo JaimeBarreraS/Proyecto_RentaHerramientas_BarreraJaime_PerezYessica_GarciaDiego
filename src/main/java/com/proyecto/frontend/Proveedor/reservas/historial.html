@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indus Rental Dashboard</title>
+    <link rel="stylesheet" href="historial.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="Imagenes/image 72.png" id="logo">
+            <h2>Indus</h2>
+            <h2 id="r">Rental</h2>
+            <h4>Tools Rental</h4>
+            <ul>
+                <li><a href="../herramientas/usuario.html">Herramientas</a></li>
+                <li><a href="../factura/historial.html">Facturación</a></li>
+                <li id="active"><a href="../reservas/historial.html">Reservas</a></li>
+            </ul>
+            <div class="settings">
+                <a href="../login/login.html" id="j">Cerrar Sesión</a>
+            </div>
+            <div id="imagenes">
+                <img src="Imagenes/herramientas.png" id="u">
+                <img src="Imagenes/invoice.png" id="i">
+                <img src="Imagenes/reports.png" id="rep">
+                <img src="Imagenes/salir.png" id="l">
+            </div>
+        </aside>
+        <div id="sesion">
+            <button class="menu-btn">&#9776;</button>
+            <input type="text" id="buscador" placeholder="buscador">
+            <div id="cu">
+                <img src="Imagenes/image 79.png" id="user">
+                <p id="y">Yessica Perez</p>
+                <p id="ad">Administradora</p>
+            </div>
+            <input type="text" id="buscador1" placeholder="buscador">
+            <img src="Imagenes/image 84.png" id="ca">
+            <img src="Imagenes/image 86.png" id="me">
+            <img src="Imagenes/image 85.png" id="si">
+        </div> 
+    </div>
+
+    <header>
+        <div class="content">
+            <h2>GESTIÓN DE RESERVAS</h2>
+            <div class="record">
+                <span class="day red">Lunes</span>
+                <div class="details">
+                <strong>Martillo Percutor</strong>
+                <p>Día: 12/12/2025</p>
+                <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
+            </div>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
+        </div>
+
+        <div class="record">
+            <span class="day green">Martes</span>
+            <div class="details">
+            <strong>Taladro</strong>
+            <p>Día: 12/12/2025</p>
+            <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
+            </div>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
+        </div>
+
+        <div class="record">
+            <span class="day yellow">Jueves</span>
+            <div class="details">
+            <strong>Andamios</strong>
+            <p>Día: 12/12/2025</p>
+            <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
+            </div>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
+        </div>
+
+        <div class="record">
+            <span class="day red">Viernes</span>
+            <div class="details">
+                <strong>Andamios</strong>
+                <p>Día: 12/12/2025</p>
+                <p>Hora: <span class="hour">9:00 am - 12:00 pm</span></p>
+            </div>
+            <select name="Estado" id="esta">
+                <option value="" placeholder=""></option>
+                <option value="opcion1">Pendiente</option>
+                <option value="opcion2">Confirmada</option>
+                <option value="opcion3">En curso</option>
+                <option value="opcion4">Completada</option>
+                <option value="opcion5">Cancelada</option>
+            </select>
+        </div>
+        <script src="script.js"></script>
+    </header>
+    <button id="boton1">CONFIRMAR</button>
+</body>
+</html>
