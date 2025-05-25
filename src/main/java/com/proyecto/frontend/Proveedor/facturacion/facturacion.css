@@ -233,11 +233,11 @@ h4{
 }
 
 #ad{
-    margin-left: 4vw;
+    margin-left: 3.2vw;
     position: absolute;
-    margin-top: -3vw;
+    margin-top: -2.5vw;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 #sesion1{
@@ -412,10 +412,12 @@ input:focus{
     padding: 20px;
     margin-left: 2vw;
 }
+
 #fac{
     margin-left: 5vw;
     margin-top: -35vw;
 }
+
 .factura-item {
     width: 100%;
     max-width: 300px;
