@@ -23,13 +23,13 @@ html {
     top: 0;
     height: 100vh;
     transition: left 0.3s ease-in-out;
-    z-index: 2;
+    z-index: 6;
 }
 
 #logo{
     position: relative;
-    margin-top: 4vw;
-    margin-left: 2vw;
+    margin-top: 1vw;
+    margin-left: 0vw;
 }
 
 .sidebar.show {
@@ -48,10 +48,9 @@ html {
     font-size: 2.2vw;
     margin-left: 5vw;
 }
-
 #r2{
     position: relative;
-    margin-top: -6vw;
+    margin-top: -7vw;
     font-size: 2.2vw;
     margin-left: 4vw;
 }
@@ -59,7 +58,7 @@ html {
 .sidebar li{
     width: 15vw;
     height: 2vw;
-    padding: 2vw 1vw ;
+    padding: 0.2vw 1vw ;
     border-radius: 1vw;
     transition: background-color 0.3s ease;
 }
@@ -67,17 +66,8 @@ html {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 6vw;
+    margin-top: 10vw;
     margin-left: 5vw;
-}
-
-#active{
-    background: #377dd8;
-    border-radius: 1vw;
-    width: 15vw;
-    height: 2.3vw;
-    padding-left: 4vw;
-    margin-left: -4vw;
 }
 
 .sidebar ul li {
@@ -115,7 +105,7 @@ html {
 
 #u{
     position: absolute;
-    margin-top: -7.5vw;
+    margin-top: -4vw;
     margin-left: 1.8vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -123,7 +113,6 @@ html {
 
 #c{
     position: absolute;
-    margin-top: -1.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -139,7 +128,7 @@ html {
 
 #l{
     position: absolute;
-    margin-top: 13.8vw;
+    margin-top: 16.5vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -212,23 +201,15 @@ h4{
 #cu{
     background-color: #CEAE80;
     width: 10vw;
-    height: 2.5vw;
+    height: 3vw;
     border-radius: 2vw;
     margin-left: 84.5vw;
     margin-top: -3vw;
     position: absolute;
 }
 
-#color{
-    background: #c7cebe;
-    width: 100%;
-    height: 0.5vw;
-    position: absolute;
-    top: 12vw;
-}
-
 #user{
-    width: 3vw;
+    width: 3.4vw;
     margin-top: -0.2vw;
     margin-left: -0.3vw;
 }
@@ -241,22 +222,12 @@ h4{
     font-weight: bold;
 }
 
-#ca{
-    width: 2.5vw;
-    margin-top: -1vw;
-    margin-left: 70vw;
-}
-
-#me{
-    width: 2.5vw;
-    margin-top: -5vw;
-    margin-left: 72vw;
-}
-
-#si{
-    width: 2.5vw;
-    margin-top: -8vw;
-    margin-left: 66vw;
+#color{
+    background: #c7cebe;
+    width: 100%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
 }
 
 #sesion1{
@@ -327,7 +298,7 @@ input:focus{
 }
 
 .bienvenida {
-    margin-top: -2.2vw;
+    margin-top: 1vw;
     margin-left: 5.5vw;
 }
 
@@ -485,6 +456,14 @@ input:focus{
 
 .btnFactura, .btnEliminar{
     height: 2.5vw;
+}
+
+#color{
+    background: #c7cebe;
+    width: 100%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
 }
 
 @media (max-width: 767px){
@@ -662,44 +641,26 @@ h4{
 
 #cu{
     background-color: #CEAE80;
-    width: 20vw;
-    height: 6vw;
+    width: 25vw;
+    height: 7vw;
     border-radius: 2vw;
-    margin-left: 75vw;
+    margin-left: 65vw;
     margin-top: -8vw;
     position: absolute;
 }
 
 #user{
-    width: 7vw;
+    width: 8vw;
     margin-top: -0.5vw;
     margin-left: -0.5vw;
 }
 
 #ad{
-    margin-left: 7vw;
+    margin-left: 9vw;
     position: absolute;
-    margin-top: -6vw;
+    margin-top: -6.4vw;
     font-weight: bold;
-    font-size: 3.3vw;
-}
-
-#ca{
-    width: 5vw;
-    margin-top: -4vw;
-    margin-left: 50vw;
-}
-
-#me{
-    width: 5vw;
-    margin-top: -17vw;
-    margin-left: 52vw;
-}
-
-#si{
-    width: 5vw;
-    margin-top: -30vw;
-    margin-left: 40vw;
+    font-size: 4vw;
 }
 
 #cu1{
@@ -745,16 +706,16 @@ h4{
 .b1 {
     color: #ffffff;  
     font-weight: bold;
-    font-size: 5vw;
-    margin-top: -7vw;
+    font-size: 5.5vw;
+    margin-top: 7vw;
     margin-left: 30vw;
     position: absolute;
 }
 
 .b2 {
     color: #ffffff;
-    font-size: 5vw;
-    margin-top: -7vw;
+    font-size: 5.5vw;
+    margin-top: 6vw;
     margin-left: 12vw;
     position: absolute;
 } 
