@@ -54,10 +54,13 @@ public class ReservaServiceImpl implements ReservaService {
         Reserva reserva = convertToEntity(reservaDTO);
 
         // Calcular total de pago
+        if (reserva.getFechaInicio() == null || reserva.getFechaFin() == null) {
+            throw new IllegalArgumentException("Las fechas de inicio y fin no pueden ser nulas");
+        }
+        
         long dias = ChronoUnit.DAYS.between(reserva.getFechaInicio(), reserva.getFechaFin());
-        if (dias <= 0)
-            dias = 1;
-
+        if (dias <= 0) dias = 1;
+        
         reserva.setTotalPago(reserva.getHerramienta().getPrecioPorDia()
                 .multiply(java.math.BigDecimal.valueOf(dias)));
 
@@ -138,7 +141,7 @@ public class ReservaServiceImpl implements ReservaService {
     private ReservaDTO convertToDTO(Reserva reserva) {
     ReservaDTO dto = new ReservaDTO();
     dto.setId(reserva.getId());
-    dto.setClienteId(reserva.getCliente().getId());
+    dto.setClienteId(reserva.getCliente() != null ? reserva.getCliente().getId() : null);
     dto.setHerramientaId(reserva.getHerramienta().getId());
     dto.setFechaInicio(reserva.getFechaInicio());
     dto.setFechaFin(reserva.getFechaFin());

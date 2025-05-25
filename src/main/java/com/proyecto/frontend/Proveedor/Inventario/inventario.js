@@ -134,7 +134,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const nuevaDescripcion = document.getElementById("edit-descripcion").value.trim();
         const nuevoPrecio = document.getElementById("edit-precio").value.trim();
         const nuevaImagenUrl = document.getElementById("edit-imagenUrl").value.trim();
-    
         try {
             const response = await fetch(API_HERRAMIENTAS, {
                 method: "POST",

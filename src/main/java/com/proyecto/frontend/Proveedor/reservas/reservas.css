@@ -66,17 +66,8 @@ html {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 6vw;
+    margin-top: 10vw;
     margin-left: 5vw;
-}
-
-#active{
-    background: #377dd8;
-    border-radius: 1vw;
-    width: 15vw;
-    height: 2.3vw;
-    padding-left: 4vw;
-    margin-left: -4vw;
 }
 
 .sidebar ul li {
@@ -92,7 +83,7 @@ html {
 }
 
 .sidebar li:hover{
-    background: #377dd8;
+    background: #a48c84;
     width: 10vw;
 }
 
@@ -146,7 +137,7 @@ html {
 
 #l{
     position: absolute;
-    margin-top: 20.8vw;
+    margin-top: 17vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -219,7 +210,7 @@ h4{
 #cu{
     background-color: #a48c84;
     width: 12vw;
-    height: 2.5vw;
+    height: 3vw;
     border-radius: 2vw;
     margin-left: 84.5vw;
     margin-top: -3vw;
@@ -227,38 +218,28 @@ h4{
 }
 
 #user{
-    width: 3vw;
+    width: 3.5vw;
     margin-top: -0.2vw;
     margin-left: -0.3vw;
 }
 
 
 #ad{
-    margin-left:3.5vw;
+    margin-left: 3.2vw;
     position: absolute;
-    margin-top: -2.3vw;
+    margin-top: -2.5vw;
     font-weight: bold;
+    font-size: 1.2vw;
 }
 
-#ca{
-    width: 2.5vw;
-    margin-top: -1vw;
-    margin-left: 70vw;
+#color{
+    background: #c7cebe;
+    width: 105%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
+    margin-left: -5vw;
 }
-
-#me{
-    width: 2.5vw;
-    margin-top: -5vw;
-    margin-left: 72vw;
-}
-
-#si{
-    width: 2.5vw;
-    margin-top: -8vw;
-    margin-left: 66vw;
-}
-
-
 
 #sesion1{
     background-color: #f5f6ff;
@@ -330,7 +311,7 @@ input:focus{
 
 
 .bienvenida {
-    margin-top: -2.2vw;
+    margin-top: 1vw;
     margin-left: 5.5vw;
 }
 
@@ -406,174 +387,358 @@ input:focus{
     cursor: pointer;
     border-radius: 0.2vw;
 }
+
 strong{
     font-weight: bold;
     font-size: 1.2vw;
     color: #a99627;
 }
 
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 45vw;
-        left: -45vw;
-        padding: 15px;
-    }
-    .sidebar.show {
-        left: 0;
-    }
-    .sidebar li, #active {
-        width: 35vw;
-        font-size: 2vw;
-    }
-    
-    #buscador, #buscador1 {
-        width: 70vw;
-        font-size: 2vw;
-        margin-left: 2vw;
-    }
-    #cu {
-        width: 30vw;
-        margin-left: 65vw;
-        font-size: 2vw;
-    }
-    #lista-reservas {
-        grid-template-columns: 1fr;
-        margin-top: 0;
-        padding: 4vw;
-    }
-    .herramienta {
-        margin-left: 0;
-        margin-top: 2vw;
-        position: static;
-    }
-    #filtro-reservas {
-        left: 2vw;
-        top: 16vw;
-        position: static;
-        margin-bottom: 2vw;
-    }
+@media (max-width: 767px) {
+html, body {
+    width: 100vw;
+    margin-top: -9vw;
+    overflow-x: hidden;
 }
 
-/* Móviles (<= 600px) */
-@media (max-width: 600px) {
-    html, body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-    .container {
-        flex-direction: column;
-        width: 100vw;
-    }
-    .sidebar {
-        width: 90vw;
-        left: -90vw;
-        padding: 8px;
-        font-size: 4vw;
-        z-index: 10;
-    }
-    .sidebar.show {
-        left: 0;
-    }
-    .sidebar h2, #r, #r2 {
-        font-size: 6vw;
-        margin-left: 2vw;
-        margin-top: 2vw;
-    }
-    .sidebar li, #active {
-        width: 80vw;
-        font-size: 4vw;
-        height: auto;
-        padding: 3vw 3vw;
-        margin: 2vw 0;
-    }
-    .sidebar ul {
-        margin-left: 2vw;
-        margin-top: 8vw;
-    }
-    #buscador, #buscador1 {
-        width: 90vw;
-        font-size: 4vw;
-        margin-left: 2vw;
-        margin-top: 4vw;
-        padding: 2vw 2vw;
-    }
-    #cu {
-        display: flex;
-        width: 40vw;
-        height: 10vw;
-        left: 8vw;
-        border-radius: 5vw;
-        margin-left: 50vw;
-        font-size: 4vw;
-    }
+.sidebar {
+    width: 20vw;
+    background: #450000;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
+}
 
-    #ca, #me, #si{
-        position: absolute;
-        right: 50vw;
-        top: 5vw;
-    }
+#logo{
+    margin-top: 1vw;
+    margin-left: 4vw;
+    width: 18vw;
+}
 
-    #ad{
-        top: 5vw;
-        left: 10vw;
-    }
+.sidebar.show {
+    left: 0;
+    width: 50vw;
+}
 
-    #user{
-        width: 10vw;
-    }
+#r{
+    margin-top: -5vw;
+    font-size: 7vw;
+    margin-left: -15vw;
+}
 
-    #sesion {
-        height: 35vw;
-        min-height: 60px;
-    }
-    #sesion1 {
-        padding: 0vw;
-        margin-top: 0vw;
-        min-height: 0vw;
-    }
+#r2{
+    position: relative;
+    margin-top: 2vw;
+    font-size: 7vw;
+    margin-left: -15vw;
+}
 
-    .bienvenida{
-        position: absolute;
-        top: 20vw;
-    }
+.sidebar li{
+    width: 15vw;
+    height: 2vw;
+    padding: 0.2vw 1vw ;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+}
 
-    #lista-reservas {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin-top: 0;
-        padding: 2vw;
-    }
-    .reserva-item p{
-        font-size: 4vw;
-        padding: 12px;
-    }
-    .herramienta-imagen {
-        width: 90vw;
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-    .herramienta {
-        margin-left: 0;
-        margin-top: 0;
-        position: static;
-        width: 100vw;
-    }
-    #filtro-reservas {
-        left: 0;
-        top: auto;
-        position: static;
-        margin-bottom: 4vw;
-        width: 100vw;
-        text-align: center;
-    }
-    h4, .b1, .b2, #info, #filtro-reservas label, strong {
-        font-size: 4vw !important;
-    }
-    /* Ajuste para botones y entradas */
-    input, button {
-        font-size: 4vw;
-        padding: 2vw 3vw;
-    }
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 45vw;
+    margin-left: 13vw;
+}
+
+.sidebar ul li {
+    margin: 80px 0;
+    width: 10vw;
+    background-color: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 5vw;
+}
+
+.sidebar li:hover{
+    background: #377dd8;
+    width: 10vw;
+}
+
+#j{
+    color: white;
+    text-decoration: none;
+    top: 190vw;
+    font-size: 5.5vw;
+    margin-left: 1vw;
+}
+
+#imagenes{
+    margin-top: -26.4vw;
+    margin-bottom: 1vw;
+    object-fit: contain;
+
+}
+
+#u{
+    position: absolute;
+    margin-top: -40vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#c{
+    position: absolute;
+    margin-top: -18vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#rep{
+    position: absolute;
+    margin-top: 4.5vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#l{
+    position: absolute;
+    margin-top: 61vw;
+    margin-left: -2vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+.settings{
+    margin-top: 20vw;
+    margin-left: 5vw;
+}
+
+.settings a:hover{
+    border-radius: 1vw;
+    background: #377dd8;
+    width: 10vw;
+}
+
+h4{
+    margin-left: 1vw;
+    font-size: 5vw;
+    margin-top: -4vw;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+    cursor: pointer;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+
+#buscador, #buscador1 {
+    width: 90vw;
+    font-size: 4vw;
+    margin-left: 2vw;
+    margin-top: 4vw;
+    padding: 2vw 2vw;
+}
+
+#cu {
+    display: flex;
+    width: 35vw;
+    height: 8vw;
+    left: 2vw;
+    border-radius: 5vw;
+    margin-left: 50vw;
+    font-size: 4vw;
+}
+
+#ad{
+    top: 7.8vw;
+    left: 1vw;
+    font-size: 1.5vw;
+}
+
+#sesion {
+    height: 35vw;
+    min-height: 60px;
+}
+
+#sesion{
+position: fixed;
+top: 0;
+left: 0;
+background: #630101;
+width: 100vw;
+height: 30vw;
+z-index: 1;
+}
+
+#buscador1{
+    background-color: #eeeeee;
+    width: 35vw;
+    height: 5vw;
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 22vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 3vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#cu{
+    background-color: #CEAE80;
+    width: 25vw;
+    height: 7vw;
+    border-radius: 2vw;
+    margin-left: 65vw;
+    margin-top: -8vw;
+    position: absolute;
+}
+
+#user{
+    width: 8vw;
+    height: 8vw;
+    margin-top: -0.5vw;
+    margin-left: -0.5vw;
+}
+
+#ad{
+    margin-left: 8.5vw;
+    position: absolute;
+    margin-top: -7vw;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+#cu1{
+    width: 19vw;
+    height: 3.5vw;
+    background-color: #eeeeee;
+    border-radius: 2vw;
+    margin-top: -2vw;
+    margin-left: 75vw;
+    font-size: 3vw;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 4.5vw;
+}
+
+#cu2{
+    width: 16vw;
+    height: 3.5vw;
+    background-color: #eeeeee;
+    border-radius: 2vw;
+    margin-top: -2vw;
+    margin-left: 55vw;
+    font-size: 3vw;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 4.5vw;
+}
+
+.bienvenida{
+    position: absolute;
+    top: 15vw;
+}
+
+#lista-reservas {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 5vw;
+    padding: 2vw;
+}
+
+.reserva-item p{
+    font-size: 4vw;
+    padding: 12px;
+}
+
+.herramienta-img {
+    width: 15vw;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.herramienta {
+    margin-left: 0;
+    margin-top: 0;
+    position: static;
+    width: 100vw;
+}
+
+#filtro-reservas {
+    left: 0;
+    top: auto;
+    position: static;
+    margin-bottom: 4vw;
+    width: 100vw;
+    text-align: center;
+}
+
+h4, .b1, .b2, #info, #filtro-reservas label, strong {
+    font-size: 4vw !important;
+}
+
+strong{
+    margin-left: 5vw;
+}
+
+/* Ajuste para botones y entradas */
+input, button {
+    font-size: 4vw;
+    padding: 2vw 3vw;
+}
+
+.estado-select{
+    position: relative;
+    width: 22vw;
+    height: 4.5vw;
+    font-size: 3vw;
+    border-radius: 0vw;
+    display: inline-block;
+    border-radius: 0.2vw;
+    background-color: #c0c0c0;
+    border: none;
+    margin-left: 15vw;
+}
+
+.confirmar-btn{
+    position: relative;
+    background-color: #b30d31;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vw;
+    left: 50vw;
+    width: 22vw; 
+    top: -5vw;
+    height: 4.5vw;
+    cursor: pointer;
+    border-radius: 0.2vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 }

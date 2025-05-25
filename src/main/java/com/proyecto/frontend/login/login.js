@@ -24,13 +24,22 @@ document.querySelector(".login-box").addEventListener("submit", async (event) =>
         if (response.ok) {
             localStorage.setItem("token", data.token);  
             localStorage.setItem("role", data.role);    
-
+            localStorage.setItem("usuarioId", data.usuarioId); 
+            if (data.role === "CLIENTE") {
+                localStorage.setItem("clienteId", data.usuarioId); 
+            }
+        
+            console.log("Usuario ID guardado:", localStorage.getItem("usuarioId"));
+            console.log("Cliente ID guardado:", localStorage.getItem("clienteId"));
+        
             alert("Login exitoso. Redirigiendo...");
+        
+        
 
             // Redirigir segun el rol
             switch (data.role) {
                 case "CLIENTE":
-                    window.location.href = "../Administrador/administrador/admin.html";
+                    window.location.href = "../Clientes/productos/productos.html";
                     break;
                 case "PROVEEDOR":
                     window.location.href = "../Proveedor/Inventario/inventario.html";
