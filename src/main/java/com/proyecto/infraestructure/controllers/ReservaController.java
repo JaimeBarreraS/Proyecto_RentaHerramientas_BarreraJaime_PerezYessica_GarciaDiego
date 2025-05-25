@@ -31,26 +31,28 @@ public class ReservaController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Obtener reserva por ID")
     public ResponseEntity<ReservaDTO> getReservaById(@PathVariable Long id) {
         return ResponseEntity.ok(reservaService.findById(id));
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('CLIENTE')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Crear reserva")
     public ResponseEntity<ReservaDTO> createReserva(@Valid @RequestBody ReservaDTO reservaDTO) {
         return ResponseEntity.ok(reservaService.save(reservaDTO));
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Actualizar reserva")
     public ResponseEntity<ReservaDTO> updateReserva(@PathVariable Long id, @Valid @RequestBody ReservaDTO reservaDTO) {
         return ResponseEntity.ok(reservaService.update(id, reservaDTO));
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN', 'PROVEEDOR')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Eliminar reserva")
     public ResponseEntity<?> deleteReserva(@PathVariable Long id) {
         reservaService.delete(id);
@@ -58,14 +60,14 @@ public class ReservaController {
     }
 
     @PutMapping("/{id}/confirmar")
-    @PreAuthorize("hasRole('PROVEEDOR')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Confirmar reserva")
     public ResponseEntity<ReservaDTO> confirmarReserva(@PathVariable Long id) {
         return ResponseEntity.ok(reservaService.confirmarReserva(id));
     }
 
     @PutMapping("/{id}/cancelar")
-    @PreAuthorize("hasAnyRole('ADMIN', 'CLIENTE')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'PROVEEDOR', 'CLIENTE')")
     @Operation(summary = "Cancelar reserva")
     public ResponseEntity<ReservaDTO> cancelarReserva(@PathVariable Long id) {
         return ResponseEntity.ok(reservaService.cancelarReserva(id));

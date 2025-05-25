@@ -73,3 +73,38 @@ button {
 button:hover{
     background-color: #3c41c8;
 }
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 70vw;
+        height: 80vw;
+    }
+    h2{
+        font-size: 8vw;
+        margin-top: -4vw;
+    }
+    .input-group{
+        margin-top: -3vw;
+        font-size: 3vw;
+        width: 70vw;
+    }
+
+    .input-group .icon {
+        margin-top: 1vw;
+    }
+    .input-group input {
+        font-size: 3vw;
+        padding-top: 2vw;
+        padding-left: 7vw;
+        margin-left: 8vw;
+        
+    }
+    button {
+        width: 50vw;
+        height: 8vw;
+        border-radius: 2vw;
+        font-size: 4vw;
+        margin-top: 4vw;
+    }
+
+}

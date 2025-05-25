@@ -17,16 +17,12 @@ import com.proyecto.domain.entities.Reserva;
 public class ReservaDTO {
     private Long id;
     
-    @NotNull
     private Long clienteId;
     
-    @NotNull
     private Long herramientaId;
     
-    @NotNull
     private LocalDate fechaInicio;
     
-    @NotNull
     private LocalDate fechaFin;
     
     private BigDecimal totalPago;

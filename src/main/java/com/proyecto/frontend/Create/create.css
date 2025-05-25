@@ -147,3 +147,97 @@ select{
 #botones button:hover{
     background-color: #3c41c8;
 }
+
+@media (max-width: 768px) {
+    body {
+        background-color: #5358eb;
+    }
+
+    #cuadro{
+        width: 95vw;
+        height: 120vw;
+        margin-left: 10vw;
+        margin-top: 40vw;
+    }
+
+    p{
+        font-size: 7vw;
+        margin-top: 4vw;
+    }
+
+    input{
+        width: 65vw;
+        height: 4vw;
+        font-size: 2.5vw;
+        left: 6vw;
+    }
+
+    #opciones{
+        width: 40vw;
+        height: 6vw;
+        font-size: 4vw;
+        margin-top:30vw ;
+        margin-left: 27vw;
+    }
+
+    #botones button{
+        margin-top: 5vw;
+        width: 25vw;
+        height: 6vw;
+        font-size: 3.5vw;
+    }
+
+    #u{
+        width: 7vw;
+        position: absolute;
+        margin-top: -30vw;
+        margin-left: 5vw;
+    }
+    
+    #e{
+        width: 7vw;
+        position: absolute;
+        margin-top: -17vw;
+        margin-left: 5vw;
+    }
+    
+    #c{
+        width: 7vw;
+        position: absolute;
+        margin-top: -5vw;
+        margin-left: 5vw; 
+    }
+    
+    #phone{
+        width: 7vw;
+        position: absolute;
+        margin-top: 10vw;
+        margin-left: 5vw; 
+    }
+
+    #formulario{
+        gap: 8vw;
+        margin-top: 20vw;
+        margin-left: 16vw;
+    }
+
+    #pas{
+        gap: 7vw;
+        margin-top: 8vw;
+        margin-left: 16vw;
+        width: 90vw;
+    }
+
+    #pas input{
+        width: 65vw;
+    
+    }
+
+    #tel{
+        width: 65vw;
+        height: 4vw;
+        position: absolute;
+        margin-top: 14vw;
+        margin-left: -6vw;
+    }
+}

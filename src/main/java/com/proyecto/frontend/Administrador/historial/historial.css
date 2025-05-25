@@ -79,7 +79,7 @@ html {
 }
 
 #active{
-    background: #377dd8;
+    background: #ffffff;
     border-radius: 1vw;
     width: 15vw;
     height: 2.3vw;
@@ -100,7 +100,7 @@ html {
 }
 
 .sidebar li:hover{
-    background: #377dd8;
+    background: #CEAE80;
     width: 10vw;
 }
 
@@ -167,7 +167,7 @@ html {
 
 .settings a:hover{
     border-radius: 1vw;
-    background: #377dd8;
+    background: #CEAE80;
     width: 10vw;
 }
 
@@ -227,10 +227,10 @@ h4{
 
 #cu{
     background-color: #CEAE80;
-    width: 12vw;
+    width: 10vw;
     height: 2.5vw;
     border-radius: 2vw;
-    margin-left: 84.5vw;
+    margin-left: 86vw;
     margin-top: -3vw;
     position: absolute;
 }
@@ -243,7 +243,7 @@ h4{
 
 
 #ad{
-    margin-left:4.5vw;
+    margin-left:3.9vw;
     position: absolute;
     margin-top: -2.3vw;
     font-weight: bold;
@@ -259,15 +259,15 @@ h4{
     order: 2;
 }
 
-#cu {
-    order: 3;
-}
 
 #ca, #me, #si {
-    margin: 0;
     position: static;
     width: 2.5vw;
     height: 2.5vw;
+}
+.cont-icon{
+    margin-top: -3vw;
+    margin-left: 50vw;
 }
 
 
@@ -341,7 +341,7 @@ input:focus{
 
 
 .bienvenida {
-    margin-top: -2.2vw;
+    margin-top: 1.5vw;
     margin-left: 5.5vw;
 }
 
