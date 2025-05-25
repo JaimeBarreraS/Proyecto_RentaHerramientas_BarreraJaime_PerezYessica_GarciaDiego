@@ -1,0 +1,973 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6ff;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20vw;
+    background: #0d484e;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#logo{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0vw;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-top: -6vw;
+    font-size: 2.2vw;
+    margin-left: 4.5vw;
+}
+
+#r{
+    margin-top: -1vw;
+    font-size: 2.2vw;
+    margin-left: 5vw;
+}
+#r2{
+    position: relative;
+    margin-top: -7vw;
+    font-size: 2.2vw;
+    margin-left: 4vw;
+}
+
+.sidebar li{
+    width: 15vw;
+    height: 2vw;
+    padding: 0.2vw 1vw ;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10vw;
+    margin-left: 5vw;
+}
+
+.sidebar ul li {
+    margin: 35px 0;
+    width: 10vw;
+    background-color: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 1.2vw;
+}
+
+.sidebar li:hover{
+    background: #377dd8;
+    width: 10vw;
+}
+
+#j{
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    top: 40.1vw;
+    font-size: 1.2vw;
+    margin-left: 1vw;
+}
+
+#imagenes{
+    margin-top: -26.4vw;
+    margin-bottom: 1vw;
+    object-fit: contain;
+
+}
+
+#u{
+    position: absolute;
+    margin-top: -4vw;
+    margin-left: 1.8vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#c{
+    position: absolute;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#rep{
+    position: absolute;
+    margin-top: 4.2vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#l{
+    position: absolute;
+    margin-top: 16.5vw;
+    margin-left: 1.5vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+.settings{
+    margin-top: 20vw;
+    margin-left: 5vw;
+}
+
+.settings a:hover{
+    border-radius: 1vw;
+    background: #377dd8;
+    width: 10vw;
+}
+
+h4{
+    margin-left: 8.3vw;
+    font-size: 1vw;
+    margin-top: -0.5vw;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    cursor: pointer;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+
+#sesion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #045b62;
+    width: 100vw;
+    height: 12vw;
+    z-index: 1;
+}
+
+#buscador{
+    background-color: #eeeeee;
+    width: 37vw;
+    height: 2.5vw;
+    margin-left: 11vw;
+    margin-top: -1vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 1vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#buscador1{
+    background-color: #eeeeee;
+    width: 30vw;
+    height: 2.5vw;
+    position: absolute;
+    margin-left:11vw;
+    margin-top: 8.5vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 1vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#cu{
+    background-color: #CEAE80;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 2vw;
+    margin-left: 84.5vw;
+    margin-top: -3vw;
+    position: absolute;
+}
+
+#user{
+    width: 3.4vw;
+    margin-top: -0.2vw;
+    margin-left: -0.3vw;
+}
+
+
+#ad{
+    margin-left:4.5vw;
+    position: absolute;
+    margin-top: -2.3vw;
+    font-weight: bold;
+}
+
+#color{
+    background: #c7cebe;
+    width: 100%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
+}
+
+#sesion1{
+    background-color: #f5f6ff;
+    width: 100vw;
+    height: 37vw;
+    margin-top: 12vw;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+#info{
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+input, button{
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    box-shadow:  0 0 0.4vw #5358eb80;
+    border:  1px solid #5358eb;
+}
+
+.sidebar ul li a:hover{
+    text-decoration: underline;
+    color: #b3b7ff;
+}
+
+#ca, #me, #si, #u, #i, #c, #re, #rep, #s, #l{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+#ca:hover, #me:hover, #si:hover, #u:hover, #i:hover, 
+#c:hover, #re:hover, #rep:hover, #s:hover, #l:hover{
+    transform: scale(1.2);
+}
+
+#buscador, #buscador1{
+    transition: box-shadow 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    box-shadow:  0 0 0.5vw rgba(83, 88, 235, 0.3);
+    border: 1px solid #5358eb;
+}
+
+#buscador, #buscador1{
+    background-color: #e4e6ff;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    border: 1px solid #5358eb;
+    box-shadow: 0 0 0.4vw rgba(83, 88, 235, 0.3);
+}
+
+#sesion, #sesion1{
+    transition: transform 0.3s ease-in-out;
+}
+
+#im:hover, #im1:hover, #im2:hover, #im3:hover, #im4:hover, #im5:hover{
+    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
+}
+
+.bienvenida {
+    margin-top: 1vw;
+    margin-left: 5.5vw;
+}
+
+.b1 {
+    color: #ffffff;  
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.b2 {
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+
+#lista-pagos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+    margin-left: 2vw;
+    background-color: #f5f6ff;
+}
+
+.pago-item {
+    width: 100%;
+    max-width: 45vw; 
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pago-item:hover {
+    transform: scale(1.05);
+}
+
+#filtros-pagos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filtros-pagos button {
+    background: #3f43c9;
+    color: white;
+    font-size: 1.2vw;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#filtros-pagos button:hover {
+    background: #5358eb;
+}
+
+#busqueda-pagos {
+    position: fixed;
+    top: 8vw;
+    display: flex;
+    left: 50vw;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #045b62;
+    z-index: 2;
+}
+
+#busqueda-pagos input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#busqueda-pagos button {
+    
+    background: #0d484e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#busqueda-pagos button:hover {
+    background-color: #CEAE80;
+}
+
+#lista-facturas {
+    margin-top:-1vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-left: 2vw;
+}
+#fac{
+    margin-left: 5vw;
+    margin-top: -35vw;
+}
+.factura-item {
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btnFactura, .btnEliminar, .btnDescargar {
+    background: #007BFF;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btnEliminar {
+    background: #d9534f;
+}
+
+.btnFactura:hover {
+    background: #0056b3;
+}
+
+.btnEliminar:hover {
+    background: #c9302c;
+}
+
+.factura-container {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    justify-content: left;
+}
+
+.factura-imagen {
+    position: relative;
+    left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    margin-top: -10vw;
+}
+
+.btnFactura, .btnEliminar{
+    height: 2.5vw;
+}
+
+#color{
+    background: #c7cebe;
+    width: 100%;
+    height: 0.5vw;
+    position: absolute;
+    top: 12vw;
+}
+
+@media (max-width: 767px){
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.sidebar {
+    width: 20vw;
+    background: #0d484e;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+#logo{
+    margin-top: 1vw;
+    margin-left: 4vw;
+    width: 18vw;
+}
+
+.sidebar.show {
+    left: 0;
+    width: 50vw;
+}
+
+#r{
+    margin-top: -5vw;
+    font-size: 7vw;
+    margin-left: -15vw;
+}
+
+#r2{
+    position: relative;
+    margin-top: 2vw;
+    font-size: 7vw;
+    margin-left: -15vw;
+}
+
+.sidebar li{
+    width: 15vw;
+    height: 2vw;
+    padding: 0.2vw 1vw ;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 45vw;
+    margin-left: 13vw;
+}
+
+.sidebar ul li {
+    margin: 80px 0;
+    width: 10vw;
+    background-color: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 5vw;
+}
+
+.sidebar li:hover{
+    background: #377dd8;
+    width: 10vw;
+}
+#j{
+    color: white;
+    text-decoration: none;
+    top: 190vw;
+    font-size: 5.5vw;
+    margin-left: 1vw;
+}
+
+#imagenes{
+    margin-top: -26.4vw;
+    margin-bottom: 1vw;
+    object-fit: contain;
+
+}
+
+#u{
+    position: absolute;
+    margin-top: -40vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#c{
+    position: absolute;
+    margin-top: -18vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#rep{
+    position: absolute;
+    margin-top: 4.5vw;
+    margin-left: 1.5vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#l{
+    position: absolute;
+    margin-top: 61vw;
+    margin-left: -2vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+.settings{
+    margin-top: 20vw;
+    margin-left: 5vw;
+}
+
+.settings a:hover{
+    border-radius: 1vw;
+    background: #377dd8;
+    width: 10vw;
+}
+
+h4{
+    margin-left: -2vw;
+    font-size: 5vw;
+    margin-top: -4vw;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+    cursor: pointer;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+
+#sesion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #045b62;
+    width: 100vw;
+    height: 30vw;
+    z-index: 1;
+}
+
+#buscador1{
+    background-color: #eeeeee;
+    width: 40vw;
+    height: 4.5vw;
+    position: absolute;
+    margin-left: 12vw;
+    margin-top: 10vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    font-size: 2.8vw;
+    padding-left: 1vw;
+    border: none;
+}
+
+#cu{
+    background-color: #CEAE80;
+    width: 25vw;
+    height: 7vw;
+    border-radius: 2vw;
+    margin-left: 65vw;
+    margin-top: -8vw;
+    position: absolute;
+}
+
+#user{
+    width: 8vw;
+    margin-top: -0.5vw;
+    margin-left: -0.5vw;
+}
+
+#ad{
+    margin-left: 9vw;
+    position: absolute;
+    margin-top: -6.4vw;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+#cu1{
+    width: 19vw;
+    height: 3.5vw;
+    background-color: #eeeeee;
+    border-radius: 2vw;
+    margin-top: -2vw;
+    margin-left: 75vw;
+    font-size: 3vw;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 4.5vw;
+}
+
+#cu2{
+    width: 16vw;
+    height: 3.5vw;
+    background-color: #eeeeee;
+    border-radius: 2vw;
+    margin-top: -2vw;
+    margin-left: 55vw;
+    font-size: 3vw;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 4.5vw;
+}
+
+#cu1:hover{
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.664);
+}
+
+#cu2:hover{
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.664);
+}
+
+.b1 {
+    color: #ffffff;  
+    font-weight: bold;
+    font-size: 5.5vw;
+    margin-top: 7vw;
+    margin-left: 30vw;
+    position: absolute;
+}
+
+.b2 {
+    color: #ffffff;
+    font-size: 5.5vw;
+    margin-top: 6vw;
+    margin-left: 12vw;
+    position: absolute;
+} 
+
+#sesion1{
+    background-color: #f5f6ff;
+    width: 100vw;
+    height: 220vw;
+    margin-top: 12vw;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+#info{
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+input, button{
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    box-shadow:  0 0 0.4vw #5358eb80;
+    border:  1px solid #5358eb;
+}
+
+.sidebar ul li a:hover{
+    text-decoration: underline;
+    color: #b3b7ff;
+}
+
+#ca, #me, #si, #u, #i, #c, #re, #rep, #s, #l{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+#ca:hover, #me:hover, #si:hover, #u:hover, #i:hover, 
+#c:hover, #re:hover, #rep:hover, #s:hover, #l:hover{
+    transform: scale(1.2);
+}
+
+#buscador, #buscador1{
+    transition: box-shadow 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    box-shadow:  0 0 0.5vw rgba(83, 88, 235, 0.3);
+    border: 1px solid #5358eb;
+}
+
+#buscador, #buscador1{
+    background-color: #e4e6ff;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#buscador:focus, #buscador1:focus{
+    border: 1px solid #5358eb;
+    box-shadow: 0 0 0.4vw rgba(83, 88, 235, 0.3);
+}
+
+#sesion, #sesion1{
+    transition: transform 0.3s ease-in-out;
+}
+
+#im:hover, #im1:hover, #im2:hover, #im3:hover, #im4:hover, #im5:hover{
+    box-shadow: 0 0 2vw rgba(96, 101, 244, 0.3);
+}
+
+.bienvenida {
+    margin-top: -2.2vw;
+    margin-left: 5.5vw;
+}
+
+#lista-pagos {
+    display: block;
+    gap: 20px; 
+    justify-content: center;
+    padding: 2vw;
+    margin-left: 5vw;
+    background-color: #f5f6ff;
+}
+
+.pago-item {
+    width: 100%;
+    max-width: 85vw; 
+    height: 80vw;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#filtros-pagos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filtros-pagos button {
+    background: #3f43c9;
+    color: white;
+    font-size: 1.2vw;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#filtros-pagos button:hover {
+    background: #5358eb;
+}
+
+#busqueda-pagos {
+    position: fixed;
+    top: 35vw;
+    display: flex;
+    flex-direction: column;
+    left: 8vw;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    z-index: 2;
+    background: white;
+}
+
+#busqueda-pagos input {
+    width: 100px;
+    height: 8vw;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 3vw;
+}
+
+#busqueda-pagos button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    padding-top: 1vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100px;
+    height: 8vw;
+    font-size: 3.5vw;
+}
+
+#busqueda-pagos button:hover {
+    background: #45a049;
+}
+
+#inputMes{
+    margin-left: 28vw;
+    margin-top: -21vw;
+}
+
+#btnBuscarMes{
+    margin-left: 28vw;
+}
+
+#inputAno{
+    margin-left: 57vw;
+    margin-top: -21vw;
+}
+
+#btnBuscarAno{
+    margin-left: 57vw;
+}
+
+#lista-facturas {
+    margin-top:-1vw;
+    display: grid;
+    gap: 2px;
+    padding: 2px;
+    margin-left: 2vw;
+}
+
+#fac{
+    margin-left: 5vw;
+    margin-top: -170vw;
+}
+
+.factura-item {
+    width: 85vw;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 5vw;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btnFactura, .btnEliminar, .btnDescargar {
+    background: #007BFF;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btnEliminar {
+    background: #d9534f;
+}
+
+.btnEliminar{
+    height: 10vw !important;
+}
+
+.btnFactura:hover {
+    background: #0056b3;
+}
+
+.btnEliminar:hover {
+    background: #c9302c;
+}
+
+.factura-container {
+    display: flex;
+    align-items: left;
+    gap: 1px;
+    height: 2vw;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.factura-imagen {
+    position: absolute;
+    left: 72vw;
+    width: 12vw;
+    height: 12vw;
+    margin-top: -47vw;
+}
+
+.btnFactura, .btnEliminar{
+    height: 45vw;
+    width: 45vw;
+    margin-left: 15vw;
+}
+
+.pago-item{
+    font-size: 3.5vw;
+}
+}

@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #5358eb;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2vw;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 30vw;
+    height: 30vw;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover{
+    transform: translateY(-0.5vw);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+.login-box h2 {
+    margin-bottom: 5rem;
+}
+h2{
+    font-size: 2.5vw;
+}
+
+.icon{
+    width: 2.5vw;
+}
+.input-group {
+    display: flex;
+    width: 27vw;
+    margin-bottom: 2rem;
+    margin-left: 1vw;
+}
+
+.input-group .icon { 
+    margin-right: 1rem;
+}
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 1vw;
+    font-size: 1.1vw;
+    border-bottom: 2px solid #e9e3e3;
+    margin-left: 1.5vw;
+    background: none;
+}
+.create-account {
+    display: block;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 1vw;
+}
+button {
+    width: 8vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #5358eb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #3c41c8;
+}
