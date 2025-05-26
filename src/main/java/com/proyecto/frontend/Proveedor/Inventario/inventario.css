@@ -55,6 +55,16 @@ html {
     margin-left: 4vw;
 }
 
+#active{
+    background: #377dd8;
+    border-radius: 1vw;
+    width: 15vw;
+    height: 2.3vw;
+    padding-left: 4vw;
+    margin-left: -4vw;
+}
+
+
 .sidebar li{
     width: 15vw;
     height: 2vw;
@@ -66,9 +76,10 @@ html {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 10vw;
+    margin-top: 6vw;
     margin-left: 5vw;
 }
+
 
 .sidebar ul li {
     margin: 35px 0;
@@ -136,7 +147,7 @@ html {
 
 #l{
     position: absolute;
-    margin-top: 16.8vw;
+    margin-top: 20.8vw;
     margin-left: 1.5vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -149,7 +160,7 @@ html {
 
 .settings a:hover{
     border-radius: 1vw;
-    background: #377dd8;
+    background: #a48c84;
     width: 10vw;
 }
 
@@ -206,8 +217,8 @@ h4{
     width: 30vw;
     height: 2.5vw;
     position: absolute;
-    margin-left: 58.5vw;
-    margin-top: 8.5vw;
+    margin-left: 66vw;
+    margin-top: 4vw;
     border-radius: 2vw;
     text-decoration: none;
     font-size: 1vw;
@@ -218,26 +229,25 @@ h4{
 #cu{
     background-color: #a48c84;
     width: 12vw;
-    height: 3vw;
+    height: 2.5vw;
     border-radius: 2vw;
-    margin-left: 84.5vw;
+    margin-left: 84vw;
     margin-top: -3vw;
     position: absolute;
 }
 
 #user{
-    width: 3.5vw;
+    width: 3vw;
     margin-top: -0.2vw;
     margin-left: -0.3vw;
 }
 
 
 #ad{
-    margin-left: 3.2vw;
+    margin-left:3.9vw;
     position: absolute;
-    margin-top: -2.5vw;
+    margin-top: -2.3vw;
     font-weight: bold;
-    font-size: 1.2vw;
 }
 
 #cu1{
@@ -271,6 +281,26 @@ h4{
 }
 #cu2:hover{
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.664);
+}
+
+.cont-icon{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    order: 2;
+}
+
+#ca, #me, #si {
+    position: static;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.cont-icon{
+    margin-top: -3vw;
+    margin-left: 50vw;
 }
 
 #sesion1{
@@ -534,11 +564,10 @@ select{
 }
 
 @media (max-width: 767px){
-html, body{
-    height: 245%;
-    margin: 0;
-    margin-top: -15vw;
-}
+    html, body{
+        height: 100%;
+        margin: 0;
+    }
 
 .sidebar {
     width: 20vw;
@@ -556,7 +585,7 @@ html, body{
 
 #logo{
     margin-top: 1vw;
-    margin-left: 4vw;
+    margin-left: 10vw;
     width: 18vw;
 }
 
@@ -566,16 +595,22 @@ html, body{
 }
 
 #r{
-    margin-top: -5vw;
+    margin-top: -4vw;
     font-size: 7vw;
-    margin-left: -15vw;
+    margin-left: -4vw;
 }
 
 #r2{
     position: relative;
     margin-top: 2vw;
     font-size: 7vw;
-    margin-left: -15vw;
+    margin-left: -4vw;
+}
+
+h4{
+    margin-left: 6.5vw;
+    font-size: 4vw;
+    margin-top: -2vw;
 }
 
 .sidebar li{
@@ -589,7 +624,7 @@ html, body{
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 45vw;
+    margin-top: 8vw;
     margin-left: 13vw;
 }
 
@@ -606,16 +641,21 @@ html, body{
 }
 
 .sidebar li:hover{
-    background: #377dd8;
-    width: 10vw;
+    background: #a48c84;
+    width: 30vw;
+    height: auto;
+    border-radius: 10vw;
 }
-
 #j{
     color: white;
     text-decoration: none;
-    top: 190vw;
-    font-size: 5.5vw;
-    margin-left: 1vw;
+    font-size: 5vw;
+    margin-left: 5vw;
+    margin-top: 121vw;
+}
+
+.cont-icon{
+    display: none;
 }
 
 #imagenes{
@@ -627,7 +667,7 @@ html, body{
 
 #u{
     position: absolute;
-    margin-top: -40vw;
+    margin-top: -36vw;
     margin-left: 1.5vw;
     width: 6vw;
     height: 6vw;
@@ -635,7 +675,7 @@ html, body{
 
 #c{
     position: absolute;
-    margin-top: -18vw;
+    margin-top: -15vw;
     margin-left: 1.5vw;
     width: 6vw;
     height: 6vw;
@@ -660,19 +700,14 @@ html, body{
 .settings{
     margin-top: 20vw;
     margin-left: 5vw;
+    background: #a48c84;
 }
 
 .settings a:hover{
     border-radius: 1vw;
-    background: #377dd8;
-    width: 10vw;
+    background: #a48c84;
 }
 
-h4{
-    margin-left: -2vw;
-    font-size: 5vw;
-    margin-top: -4vw;
-}
 
 .menu-btn {
     background: none;
@@ -705,25 +740,25 @@ h4{
 
 #buscador1{
     background-color: #eeeeee;
-    width: 35vw;
-    height: 5vw;
+    width: 60vw;
+    height: 8vw;
     position: absolute;
-    margin-left: 20vw;
-    margin-top: 22vw;
-    border-radius: 2vw;
+    margin-left: 8vw;
+    margin-top: 32vw;
+    border-radius: 4vw;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 3.5vw;
     padding-left: 1vw;
     border: none;
 }
 
 #cu{
     background-color: #CEAE80;
-    width: 25vw;
+    width: 38vw;
     height: 7vw;
-    border-radius: 2vw;
-    margin-left: 65vw;
-    margin-top: -8vw;
+    border-radius: 4vw;
+    margin-left: 60vw;
+    margin-top: -7vw;
     position: absolute;
 }
 
@@ -746,7 +781,7 @@ h4{
     height: 3.5vw;
     background-color: #eeeeee;
     border-radius: 2vw;
-    margin-top: -2vw;
+    margin-top: 34vw;
     margin-left: 75vw;
     font-size: 3vw;
     border: none;
@@ -799,6 +834,7 @@ h4{
     margin-top: 5vw;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .card-img-top{
@@ -1002,21 +1038,21 @@ select{
 }
 
 .bienvenida {
-    margin-top: -4vw;
-    margin-left: 5.5vw;
+    margin-top: 3vw;
+    margin-left:vw;
 }
 
 .b1 {
     color: #ffffff;  
     font-weight: bold;
     font-size: 5vw;
-    margin-left: 25vw;
+    margin-left: 28vw;
 }
 
 .b2 {
     color: #ffffff;
     font-size: 5vw;
-    margin-left: 12vw;
+    margin-left: 13vw;
 }
 
 .foto{

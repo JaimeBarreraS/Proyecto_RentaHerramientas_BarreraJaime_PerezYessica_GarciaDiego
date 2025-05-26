@@ -532,7 +532,7 @@ html, body{
 
 #logo{
     margin-top: 1vw;
-    margin-left: 4vw;
+    margin-left: 10vw;
     width: 18vw;
 }
 
@@ -542,16 +542,22 @@ html, body{
 }
 
 #r{
-    margin-top: -5vw;
+    margin-top: -4vw;
     font-size: 7vw;
-    margin-left: -15vw;
+    margin-left: -4vw;
 }
 
 #r2{
     position: relative;
     margin-top: 2vw;
     font-size: 7vw;
-    margin-left: -15vw;
+    margin-left: -4vw;
+}
+
+h4{
+    margin-left: 6.5vw;
+    font-size: 4vw;
+    margin-top: -2vw;
 }
 
 .sidebar li{
@@ -565,7 +571,7 @@ html, body{
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 45vw;
+    margin-top: 8vw;
     margin-left: 13vw;
 }
 
@@ -582,15 +588,21 @@ html, body{
 }
 
 .sidebar li:hover{
-    background: #377dd8;
-    width: 10vw;
+    background: #a48c84;
+    width: 30vw;
+    height: auto;
+    border-radius: 10vw;
 }
 #j{
     color: white;
     text-decoration: none;
-    top: 190vw;
-    font-size: 5.5vw;
-    margin-left: 1vw;
+    font-size: 5vw;
+    margin-left: 5vw;
+    margin-top: 121vw;
+}
+
+.cont-icon{
+    display: none;
 }
 
 #imagenes{
@@ -602,7 +614,7 @@ html, body{
 
 #u{
     position: absolute;
-    margin-top: -40vw;
+    margin-top: -36vw;
     margin-left: 1.5vw;
     width: 6vw;
     height: 6vw;
@@ -610,7 +622,7 @@ html, body{
 
 #c{
     position: absolute;
-    margin-top: -18vw;
+    margin-top: -15vw;
     margin-left: 1.5vw;
     width: 6vw;
     height: 6vw;
@@ -635,18 +647,12 @@ html, body{
 .settings{
     margin-top: 20vw;
     margin-left: 5vw;
+    background: #a48c84;
 }
 
 .settings a:hover{
     border-radius: 1vw;
-    background: #377dd8;
-    width: 10vw;
-}
-
-h4{
-    margin-left: -2vw;
-    font-size: 5vw;
-    margin-top: -4vw;
+    background: #a48c84;
 }
 
 .menu-btn {
@@ -670,13 +676,13 @@ h4{
 }
 
 #buscador1{
-    background-color: #eeeeee;
-    width: 45vw;
-    height: 6vw;
+    background-color: #c0c0c0;
+    width: 60vw;
+    height: 8vw;
     position: absolute;
-    margin-left: 12vw;
-    margin-top: 22vw;
-    border-radius: 2vw;
+    margin-left: 8vw;
+    margin-top: 32vw;
+    border-radius: 4vw;
     text-decoration: none;
     font-size: 3.5vw;
     padding-left: 1vw;
@@ -685,24 +691,24 @@ h4{
 
 #cu{
     background-color: #CEAE80;
-    width: 25vw;
-    height: 8vw;
-    border-radius: 2vw;
-    margin-left: 65vw;
-    margin-top: -8vw;
+    width: 28vw;
+    height: 7vw;
+    border-radius: 4vw;
+    margin-left: 70vw;
+    margin-top: -7vw;
     position: absolute;
 }
 
 #user{
-    width: 9.5vw;
+    width: 8vw;
     margin-top: -0.5vw;
     margin-left: -0.5vw;
 }
 
 #ad{
-    margin-left: 10vw;
+    margin-left: 8.5vw;
     position: absolute;
-    margin-top: -7.5vw;
+    margin-top: -7vw;
     font-weight: bold;
     font-size: 4vw;
 }
@@ -712,7 +718,7 @@ h4{
     height: 8vw;
     background: #0d484e;
     border-radius: 2vw;
-    margin-top: 22vw;
+    margin-top: 34vw;
     margin-left: 55vw;
     font-size: 3.5vw;
     border: none;
@@ -729,7 +735,7 @@ h4{
     height: 8vw;
     background: #0d484e;
     border-radius: 2vw;
-    margin-top: 22vw;
+    margin-top: 34vw;
     margin-left: 20vw;
     color: white;
     font-size: 3.5vw;
@@ -765,6 +771,7 @@ h4{
     margin-top: 5vw;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .card-img-top{
@@ -978,22 +985,23 @@ select{
     left: 16vw;
 }
 
+.bienvenida {
+    margin-top: 3vw;
+    margin-left:vw;
+}
+
 .b1 {
     color: #ffffff;  
     font-weight: bold;
-    font-size: 4vw;
-    margin-top: -2vw;
-    margin-left: 25vw;
-    position: absolute;
+    font-size: 5vw;
+    margin-left: 28vw;
 }
 
 .b2 {
     color: #ffffff;
-    font-size: 4vw;
-    margin-top: -2vw;
-    margin-left: 12vw;
-    position: absolute;
-}   
+    font-size: 5vw;
+    margin-left: 13vw;
+}
 
 #color{
     background: #c7cebe;

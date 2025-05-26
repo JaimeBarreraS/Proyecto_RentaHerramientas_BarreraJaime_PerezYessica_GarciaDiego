@@ -59,7 +59,8 @@ public class ReservaServiceImpl implements ReservaService {
         }
         
         long dias = ChronoUnit.DAYS.between(reserva.getFechaInicio(), reserva.getFechaFin());
-        if (dias <= 0) dias = 1;
+        if (dias <= 0)
+            dias = 1;
         
         reserva.setTotalPago(reserva.getHerramienta().getPrecioPorDia()
                 .multiply(java.math.BigDecimal.valueOf(dias)));
@@ -139,22 +140,30 @@ public class ReservaServiceImpl implements ReservaService {
     }
 
     private ReservaDTO convertToDTO(Reserva reserva) {
-    ReservaDTO dto = new ReservaDTO();
-    dto.setId(reserva.getId());
-    dto.setClienteId(reserva.getCliente() != null ? reserva.getCliente().getId() : null);
-    dto.setHerramientaId(reserva.getHerramienta().getId());
-    dto.setFechaInicio(reserva.getFechaInicio());
-    dto.setFechaFin(reserva.getFechaFin());
-    dto.setTotalPago(reserva.getTotalPago());
-    dto.setEstado(reserva.getEstado());
-    dto.setObservaciones(reserva.getObservaciones());
+        ReservaDTO dto = new ReservaDTO();
+        dto.setId(reserva.getId());
     
-    dto.setClienteNombre(reserva.getCliente().getNombre()); 
-    dto.setHerramientaNombre(reserva.getHerramienta().getNombre()); 
-    dto.setHerramientaImagen(reserva.getHerramienta().getImagenUrl()); 
+        if (reserva.getCliente() != null) {
+            dto.setClienteId(reserva.getCliente().getId());
+            dto.setClienteNombre(reserva.getCliente().getNombre());
+        }
     
-    return dto;
-}
+        if (reserva.getHerramienta() != null) {
+            dto.setHerramientaId(reserva.getHerramienta().getId());
+            dto.setHerramientaNombre(reserva.getHerramienta().getNombre());
+            dto.setHerramientaImagen(reserva.getHerramienta().getImagenUrl());
+        }
+    
+        dto.setFechaInicio(reserva.getFechaInicio());
+        dto.setFechaFin(reserva.getFechaFin());
+        dto.setTotalPago(reserva.getTotalPago());
+        dto.setEstado(reserva.getEstado());
+        dto.setObservaciones(reserva.getObservaciones());
+        dto.setFechaReserva(reserva.getFechaReserva());
+    
+        return dto;
+    }
+    
     
 
 }
