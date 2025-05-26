@@ -44,48 +44,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    const herramientasImagenes = {
-        "Destornillador": "Imagenes/destornillador.jpg",
-        "Pala": "Imagenes/pala.jpg",
-        "Cortadora": "Imagenes/cortadora.jpg",
-        "Lijadora": "Imagenes/lijadora.jpg",
-        "Pulidora": "Imagenes/pulidora.jpg",
-        "Andamio": "Imagenes/andamio.jpg",
-        "Cinta metrica": "Imagenes/cinta_metrica.jpg",
-        "Taladro Percutor": "Imagenes/taladro_percutor.jpg",
-        "Escalera": "Imagenes/escalera.jpg",
-        "Nivel": "Imagenes/nivel.jpg",
-        "Rotomartillo": "Imagenes/rotomartillo.jpg",
-        "Compresor": "Imagenes/compresor.jpg",
-        "Soldador": "Imagenes/soldador.jpg",
-        "Generador": "Imagenes/generador.jpg",
-        "Compactadora": "Imagenes/compactadora.jpg",
-        "Broca": "Imagenes/broca.jpg",
-        "Multimetro": "Imagenes/multimetro.jpg",
-        "Cepillo electrico": "Imagenes/cepillo_electrico.jpg",
-        "Sierra circular": "Imagenes/sierra_circular.jpg",
-        "Aspiradora industrial": "Imagenes/aspiradora.jpg"
-    };
-
     function mostrarReservas(reservas) {
         const contenedor = document.getElementById("lista-reservas");
-        const estadoSeleccionado = document.getElementById("estadoReserva").value;
-    
-        const reservasFiltradas = estadoSeleccionado === "todos" 
-        ? reservas 
-        : reservas.filter(reserva => reserva.estado.toUpperCase() === estadoSeleccionado.toUpperCase());
+        const estadoSeleccionado = document.getElementById("estadoReserva").value.toLowerCase(); // 🔥 Corrección
 
-    
+        console.log("Estado seleccionado para filtrar:", estadoSeleccionado);
+
+        const reservasFiltradas = estadoSeleccionado === "todos" 
+            ? reservas 
+            : reservas.filter(reserva => reserva.estado?.toLowerCase() === estadoSeleccionado); // 🔥 Comparación segura
+
         contenedor.innerHTML = reservasFiltradas.length > 0 
             ? reservasFiltradas.map(reserva => {
                 const fechaReserva = new Date(reserva.fechaReserva);
                 const fechaInicio = new Date(reserva.fechaInicio);
                 const fechaFin = new Date(reserva.fechaFin);
-    
+
                 const reservaFormateada = !isNaN(fechaReserva.getTime()) ? fechaReserva.toLocaleString() : "Fecha no válida";
                 const inicioFormateada = !isNaN(fechaInicio.getTime()) ? fechaInicio.toLocaleString() : "Fecha no válida";
                 const finFormateada = !isNaN(fechaFin.getTime()) ? fechaFin.toLocaleString() : "Fecha no válida";
-    
+
                 return `
                     <div class="reserva-item">
                         <p><strong>Cliente:</strong> ${reserva.clienteNombre}</p>
@@ -97,15 +75,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <p><strong>Total Pago:</strong> $${reserva.totalPago}</p>
                         <p><strong>Observaciones:</strong> ${reserva.observaciones || "Sin observaciones"}</p>
                         <div class="herramienta"> 
-                        <img src="${herramientasImagenes[reserva.herramientaNombre] || 'Imagenes/default.jpg'}" 
-                            alt="${reserva.herramientaNombre}" class="herramienta-imagen">
+                            <img src="${reserva.herramientaImagen || 'Imagenes/default.jpg'}" 
+                                alt="${reserva.herramientaNombre}" class="herramienta-imagen">
                         </div>
                     </div>
                 `;
             }).join("")
             : "<p>No se encontraron reservas con este estado.</p>";
     }
+
     document.getElementById("estadoReserva").addEventListener("change", cargarReservas);
 
     await cargarReservas();
 });
+
