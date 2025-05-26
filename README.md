@@ -49,7 +49,8 @@ Proyecto_RentaHerramientas/
     │                               └── login.html
     ├── src/main/resources/
     │   ├── application.properties
-    │   └── erd_diagram.png
+    │   ├── proyectodb.png
+    │   └── Presentacion_Proyecto_Renta_Herramientas.pdf
     ├── pom.xml
     └── README.md
 ```
@@ -66,6 +67,15 @@ Una vez que el backend está corriendo, puedes acceder a la documentación inter
   * `/swagger-ui.html`
 
 Aquí podrás explorar todos los endpoints disponibles, realizar pruebas, y ver los esquemas de request y response.
+
+---
+## 📝 Presentacion PDF.
+
+Aqui podras ver un presentacion breve del proyecto
+
+```bash
+cd resources/Presentacion_Proyecto_Renta_Herramientas.pdf
+```
 
 ---
 
